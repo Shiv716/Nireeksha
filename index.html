@@ -697,47 +697,38 @@
             }
                 
            .project-card .project-info {
-        opacity: 0; /* Hide text initially */
+        opacity: 0; /* Hide text */
         visibility: hidden;
-        color: white !important; /* Ensure text is readable */
-        background: rgba(0, 0, 0, 0.8) !important; /* Ensure good contrast */
+        color: white !important;
+        background: rgba(0, 0, 0, 0.8) !important;
         text-align: center;
         padding: 15px;
         border-radius: 10px;
         width: 90%;
         margin: auto;
         transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
-        pointer-events: none; /* Prevent accidental clicks */
+        pointer-events: none;
     }
 
-    /* ✅ Show Text Only on Click */
-    .project-card:active .project-info,
-    .project-card:focus .project-info {
-        opacity: 1 !important; /* Make text fully visible */
-        visibility: visible !important;
-        pointer-events: auto !important; /* Allow interaction */
+    /* ✅ Darken Image on Active */
+    .project-card.active img {
+        filter: brightness(40%) !important;
     }
 
-    /* ✅ Darken Image When Clicked */
-    .project-card:active img,
-    .project-card:focus img {
-        filter: brightness(40%) !important; /* Darken image when overlay is shown */
-    }
-
-    /* ✅ Ensure Overlay is Clickable */
-    .project-card {
-        position: relative;
-        overflow: hidden; /* Prevents extra white areas */
-        cursor: pointer; /* Ensures users know it’s clickable */
-    }
-
-    /* ✅ Make Sure Overlay Stays on Top */
+    /* ✅ Ensure Overlay Stays on Top */
     .project-card .project-info {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 10 !important; /* Keep overlay above everything */
+        z-index: 10 !important;
+    }
+
+    /* ✅ When JavaScript Adds .active Class, Show Text */
+    .project-card.active .project-info {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
     }
         
             /* Disable Any Background That Might Be Causing the White Slate */
@@ -1514,8 +1505,23 @@
 
     observer.observe(ctaSection);
 
-        // Initial background setup
+    // Initial background setup
         changeBackground();
+    });
+
+    // Click effect for projects on mobile.
+    document.addEventListener("DOMContentLoaded", function () {
+        const projectCards = document.querySelectorAll(".project-card");
+    
+        projectCards.forEach(card => {
+            card.addEventListener("click", function () {
+                // Remove active class from all project cards first
+                projectCards.forEach(c => c.classList.remove("active"));
+    
+                // Add active class only to the clicked card
+                this.classList.add("active");
+            });
+        });
     });
 
     </script>
