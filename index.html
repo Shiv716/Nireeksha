@@ -697,18 +697,21 @@
             }
                 
            .project-card .project-info {
-                position: absolute; 
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%); 
-                text-align: center !important; 
-                display: flex !important; 
-                justify-content: center !important; 
-                align-items: center !important; 
+                opacity: 0; /* Hide text */
+                visibility: hidden;
+                color: white !important;
+                background: rgba(0, 0, 0, 0.8) !important;
+                text-align: center;
+                padding: 15px;
+                border-radius: 10px;
+                width: 90%;
+                display: flex !important;
+                margin: auto;
+                justify-content: center !important;
+                transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+                pointer-events: none;
+                align-items: center !important;
                 flex-direction: column; 
-                width: 100%;
-                height: 100%; 
-                padding: 20px; 
             }
 
             /* Darken Image on Active */
