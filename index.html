@@ -1097,7 +1097,63 @@
             width: 200px !important; /* Full width */
             display: block;
             margin: 20px auto; /* Center the button */
-        }
+            }
+
+            /* ----------CONTINUE--------------*/
+
+            .scroll-buttons-container {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                gap: 15px !important;
+                margin-top: 10px !important;
+                width: 100%;
+            }
+            
+            .scroll-button {
+                font-size: 1.5rem; /* Default size */
+                cursor: pointer;
+                color: #daa60c !important;
+                background: none !important;
+                border: none;
+                cursor: pointer !important;
+                display: flex !important;
+                padding: 5px;
+                justify-content: center !important;
+                align-items: center !important;
+                text-indent: -9999px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            #scroll-left::after,
+            #scroll-left-awards::after {
+                content: "◀"; /* Font Awesome left arrow */
+                font-family: "Font Awesome 6 Free" !important;
+                font-weight: 900 !important;
+                font-size: 2rem !important;
+                text-indent: 0;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        
+            #scroll-right::after,
+            #scroll-right-awards::after {
+                content: "▶"; /* Font Awesome right arrow */
+                font-family: "Font Awesome 6 Free" !important;
+                font-weight: 900 !important;
+                font-size: 2rem !important;
+                text-indent: 0;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .scroll-button:hover {
+                opacity: 0.8 !important; /* Slight fade effect on hover */
+            }
+
 
     }
 /* ----------------------------------------------- */
