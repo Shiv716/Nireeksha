@@ -1005,17 +1005,20 @@
                 justify-content: center;
                 align-items: center;
                 width: 120px; /* Set exact size */
-                height: auto;
+                height: 120px;
                 border-radius: 5%;
                 overflow: hidden;
+                margin: 0 auto 10px;
+                padding: 0;
                 margin-bottom: 10px; /* Moves image to top */
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
             }
 
             .leader-image img {
                 width: 100%;
-                height: auto; /* Maintain aspect ratio */
+                height: 100%; /* Maintain aspect ratio */
                 object-fit: cover; /* Prevents stretching */
+                display: block;
             }
             
             .leader-info {
