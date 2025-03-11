@@ -697,42 +697,48 @@
             }
                 
            .project-card .project-info {
-                opacity: 0; /* Hide text initially */
-                visibility: hidden;
-                color: white !important; /* Ensure contrast */
-                background: rgba(0, 0, 0, 0.8) !important; /* Dark background for visibility */
-                text-align: center;
-                padding: 15px;
-                border-radius: 10px;
-                width: 90%; /* Keep text readable */
-                margin: auto;
-                transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
-            }
-        
-            /* Show Text Only on Click */
-            .project-card:active .project-info {
-                opacity: 1 !important; /* Make text fully visible */
-                visibility: visible !important;
-            }
-        
-            /* Prevent White Slate Issue */
-            .project-card:active img {
-                filter: brightness(40%) !important; /* Darken image when overlay is shown */
-            }
-        
-            /* Ensure Overlay Stays Above White Areas */
-            .project-card {
-                position: relative;
-                overflow: hidden; /* Prevents extra white areas */
-            }
-        
-            .project-card .project-info {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 10 !important; /* Keep overlay above everything */
-            }
+        opacity: 0; /* Hide text initially */
+        visibility: hidden;
+        color: white !important; /* Ensure text is readable */
+        background: rgba(0, 0, 0, 0.8) !important; /* Ensure good contrast */
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        width: 90%;
+        margin: auto;
+        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+        pointer-events: none; /* Prevent accidental clicks */
+    }
+
+    /* ✅ Show Text Only on Click */
+    .project-card:active .project-info,
+    .project-card:focus .project-info {
+        opacity: 1 !important; /* Make text fully visible */
+        visibility: visible !important;
+        pointer-events: auto !important; /* Allow interaction */
+    }
+
+    /* ✅ Darken Image When Clicked */
+    .project-card:active img,
+    .project-card:focus img {
+        filter: brightness(40%) !important; /* Darken image when overlay is shown */
+    }
+
+    /* ✅ Ensure Overlay is Clickable */
+    .project-card {
+        position: relative;
+        overflow: hidden; /* Prevents extra white areas */
+        cursor: pointer; /* Ensures users know it’s clickable */
+    }
+
+    /* ✅ Make Sure Overlay Stays on Top */
+    .project-card .project-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10 !important; /* Keep overlay above everything */
+    }
         
             /* Disable Any Background That Might Be Causing the White Slate */
             .project-card .overlay {
