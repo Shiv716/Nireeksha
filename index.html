@@ -580,7 +580,7 @@
             }
 
             #logo-section img {
-                max-width: 350px;
+                max-width: 380px;
             }
                     
             /* Navigation */
@@ -602,19 +602,29 @@
             /* Hero Section */
             #hero {
                 height: auto; /* Allow it to size dynamically */
-                min-height: 100vh; /* Just fill one full screen */
+                min-height: 170vh; /* Just fill one full screen */
                 display: flex;
                 flex-direction: column;
                 justify-content: center; /* Center content vertically */
                 align-items: center;
                 padding: 40px 20px; /* Reduce unnecessary padding */
             }
+            #contact {
+                padding-top: 80px !important; /* Adds more space at the top */
+            }
             
             #specialities {
                 height: auto;
                 min-height: 100vh;
             }
-        
+
+            .speciality-card {
+                width: 100%; /* Make it take full available width */
+                max-width: 350px; /* Match other cards */
+                height: auto; /* Let it adjust naturally */
+                margin: 0 auto 20px; /* Center it and add spacing */
+            }
+
             #hero h2 {
                 font-size: 2rem;
             }
