@@ -633,8 +633,17 @@
             header {
                 height: 60px;
                 padding: 5px;
+                width: 95vw; /* Slightly reduce width */
+                margin: 0 auto; /* Center it */
             }
-        
+
+            /* Reduce logo size in the logo section */
+            #logo-section img {
+                max-width: 200px; /* Reduce image width */
+                height: auto; /* Maintain aspect ratio */
+                margin-bottom: 30px; /* Adjust spacing */
+            }
+                    
             /* Navigation */
             nav {
                 display: flex;
@@ -684,6 +693,17 @@
                 padding: 8px 20px;
                 text-align: center;
             }
+
+            /* Prevent buttons from changing color when clicked */
+            .btn-custom:focus,
+            .btn-custom:active {
+                color: inherit !important;
+                background-color: inherit !important;
+                border-color: inherit !important;
+                outline: none !important;
+                box-shadow: none !important;
+            }
+
         
             /* Project & Award Cards */
             .project-card,
@@ -891,6 +911,24 @@
             /* Ensuring Team Section Stacks Items */
             .team-grid {
                 grid-template-columns: 1fr; /* Stack team members in one column */
+            }
+
+            /* Center the container for service cards */
+            .services-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            /* Ensure each service card is centered */
+            .service-card {
+                width: 90%; /* Adjust width for mobile */
+                max-width: 350px; /* Prevents excessive width */
+                margin: 0 auto 20px; /* Centers the card and adds spacing */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
 
         
