@@ -224,6 +224,51 @@
             color: white;
         }
 
+        
+        /* ----------------For Mobile Screen-------------- */
+        @media screen and (max-width: 1024px) {
+
+            header {
+                height: 100px;
+                padding: 5px;
+                width: 100vw;
+                display: flex;
+                justify-content: center; /* Center the logo */
+                align-items: center;
+                background: white;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+/* Hero Section */
+            #hero {
+                height: auto; /* Allow it to size dynamically */
+                min-height: 150vh; /* Just fill one full screen */
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* Center content vertically */
+                align-items: center;
+                padding: 40px 20px; /* Reduce unnecessary padding */
+                padding-top: 200px !important; /* Move everything down */
+            }
+
+/* Ensuring sections don’t touch screen edges */
+            section {
+                padding: 40px 15px;
+                width: 100vw; /* Ensure it fits exactly */
+                max-width: 100%;
+                overflow: hidden;
+            }
+
+        footer {
+                        width: 100vw;
+                        height: auto;
+                        padding: 10px;
+                        text-align: center;
+                    }
+
+
+           }
+
 
 </style>
 
