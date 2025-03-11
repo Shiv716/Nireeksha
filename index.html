@@ -1053,13 +1053,24 @@
                 margin: 0 auto; /* Center align */
             }
 
-            #service-card p,
-            #service-card a {
-                color: black !important; /* Keep text white */
+            .btn-custom:visited,
+            .btn-custom:active,
+            .btn-custom:focus,
+            a:visited,
+            a:active {
+                color: inherit !important; 
+                background-color: inherit !important;
                 text-decoration: none !important;
+                outline: none !important;
+                box-shadow: none !important;
+            }
+
+            .service-card p,
+            .service-card a {
+                color: black !important; /* Keep text black */
             }
             
-            #service-card a:hover {
+            .service-card a:hover {
                 text-decoration: underline !important;
             }
 
