@@ -626,6 +626,235 @@
             transform: scale(1.05);
         }
 
+        /* Mobile-Friendly Settings */
+/* ----------------------------------------------- */
+        @media screen and (max-width: 1024px) {
+        
+            /* Header & Navigation */
+            header {
+                padding: 10px 0;
+            }
+        
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        
+            nav a {
+                font-size: 1rem;
+                padding: 10px;
+                display: block;
+            }
+        
+            /* Hero Section */
+            #hero {
+                height: auto;
+                padding: 50px 20px;
+                text-align: center;
+            }
+        
+            #hero h2 {
+                font-size: 2rem;
+            }
+        
+            #hero p {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+        
+            /* Buttons */
+            .btn-custom {
+                width: 100%;
+                max-width: 250px;
+                font-size: 1rem;
+                padding: 8px 20px;
+            }
+        
+            /* Project & Award Cards */
+            .project-card,
+            .certification-card {
+                width: 100%;
+                min-height: 350px;
+            }
+        
+            .project-info {
+                font-size: 1rem;
+            }
+        
+            /* Contact Form */
+            .form-control {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        
+            .btn-custom {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        
+            /* Service Cards */
+            .service-card {
+                width: 95%;
+                margin: 0 auto;
+            }
+        
+            /* Ensuring sections don’t touch screen edges */
+            section {
+                padding: 40px 15px;
+            }
+        
+            /* Cards (Education, Projects) */
+            .col-md-6, .col-md-4 {
+                width: 100%;
+            }
+        
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        
+            /* Card Text Adjustments */
+            .card-body {
+                padding: 20px;
+                text-align: center;
+            }
+        
+            .card-title {
+                font-size: 1.4rem;
+            }
+        
+            .card-text {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        
+            /* Card Images */
+            .card-img-top {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        
+            /* Project Overlay Text */
+            .overlay {
+                font-size: 1rem;
+                padding: 15px;
+                text-align: center;
+            }
+        
+            /* Adjusting button layout */
+            .d-flex.align-items-center.justify-content-center {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+        
+            .d-flex.align-items-center.justify-content-center a:nth-child(-n+2) {
+                order: -1; 
+            }
+        
+            .d-flex.align-items-center.justify-content-center a:nth-child(n+3) {
+                order: 1; 
+            }
+        
+            /* Disable Hover Effects for Mobile */
+            @media (hover: none) {
+                .project-card .overlay {
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    pointer-events: none;
+                }
+        
+                .project-card:active .overlay {
+                    opacity: 1 !important;
+                    pointer-events: auto;
+                }
+        
+                /* Ensure buttons inside overlay remain clickable */
+                .project-card .overlay a,
+                .project-card .overlay .btn {
+                    pointer-events: auto !important;
+                }
+            }
+        
+            /* Ensuring All Project Cards Have Consistent Size */
+            .project-card {
+                min-height: 520px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                overflow: hidden;
+            }
+        
+            /* Ensuring Card Content Stay Centered */
+            .project-card .card-body {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: center;
+            }
+        
+            /* Ensuring Card Images Fully Cover */
+            .project-card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        
+            /* Disabling Hover Effects for Mobile */
+            @media (hover: none) {
+                .project-card:hover .overlay,
+                .project-card:hover .project-image {
+                    opacity: 1;
+                }
+            }
+        
+            .row:first-of-type .project-card {
+                min-height: 390px;
+            }
+        
+            /* Contact-Profile Section */
+            #contact p {
+                font-size: 1rem;
+            }
+        
+            /* Mail-contact section adjustments */
+            .container-spacing {
+                padding: 50px 15px;
+            }
+        
+            .btn-custom {
+                font-size: 1rem;
+                padding: 8px 20px;
+                min-width: 150px;
+            }
+        
+            #contactMain .d-flex {
+                display: flex !important;
+                flex-direction: column;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+        
+            /* Disabling the hover effects for mobile */
+            .service-card:hover, 
+            .btn-custom:hover {
+                transform: none;
+                box-shadow: none;
+                background-color: white;
+                color: #6a11cb;
+            }
+        
+        }
+/* ----------------------------------------------- */
+
 
     </style>
 
