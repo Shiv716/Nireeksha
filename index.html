@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nireeksha Engitech</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafa;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            position: fixed;
+            width: 100vw;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            left: 0;
+            right: 0;
+            transition: box-shadow 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .shadow-active {
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #hero {
+            background: linear-gradient(to right, #f5c107, #daa60c);
+            color: white;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+            
+        }
+
+        /* #hero:hover {
+            transform: scale(1.05);
+        } */
+
+        /* .service-card {
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        } */
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            margin-top: auto;
+            width: 100%;
+            height: 9vh;
+        }
+
+        .container-spacing {
+            padding: 100px 0;
+        }
+
+        .btn-custom {
+            background-color: white;
+            color: #daa850;
+            border: 2px solid #daa60c; /* Adds a border */
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border-radius: 30px;
+            transition: transform 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+            min-width: 200px;
+            margin-top: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-custom:hover {
+            background-color: #daa60c;
+            color: white;
+            transform: scale(1.08);
+            border: 2px solid #daa60c;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-custom:active {
+            border-color: #daa60c;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px; /* Adjust spacing between buttons */
+        }
+
+        .btn-row {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            font-size: 1.2rem; /* Adjust size as needed */
+            padding-top: 22px;
+            display: inline-block;
+            text-decoration: none;
+            color: #daa60c;
+        }
+
+        nav a:hover {
+            color: #ffd500; /* Lighter shade on hover */
+            text-decoration: underline; /* Optional effect */
+        }
+
+        h2 {
+            font-size: 2.5rem; /* Adjust as needed */
+            font-size: 'Arial', sans-serif;
+
+        }
+
+        section {
+            scroll-margin-top: 100px; /* Adjust this value based on header height */
+            padding-top: 50px; /* Adds space at the top */
+        }
+
+        #logo-section {
+            /* background: white;  */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: 2;
+            /* transition: background-image 6s ease-in-out; */
+            /* transition: background-image 0.5s ease-in-out, background-color 0.5s ease-in-out; */
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #logo-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+            linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(234, 229, 229, 0.95) 50%, rgba(255, 255, 255, 0) 100%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        @keyframes bounceDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-120px); /* Higher starting point */
+            }
+            45% {
+                opacity: 1;
+                transform: translateY(50); /* Reach ground faster */
+            }
+            65% {
+                transform: translateY(-5px); /* More visible overshoot */
+            }
+            80% {
+                transform: translateY(-4px); /* Gentle bounce up */
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        #logo-section img {
+            max-width: 1200px;
+            margin-bottom: 50px;
+            animation: bounceDown 3s cubic-bezier(0.33, 1.4, 0.42, 1);
+        }
+
+        .service-card {
+            transition: transform 0.3s ease-in-out;
+            border-radius: 20px;
+            border: 2px solid #daa60c; /* Warm golden border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+            background: white;
+        }
+
+        .service-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 14px rgba(216, 140, 12, 0.2); /* Stronger glow effect */
+            border-color: #ffd500;
+        }
+
+        /* section, div {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        section:hover, div:hover {
+            transform: scale(1.05);
+        } */
+
+
+        #projects {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .projects-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 20px;
+            white-space: nowrap;
+            max-width: 90vw;
+        }
+
+        .projects-container::-webkit-scrollbar {
+            display: none; /* Hide scrollbar */
+        }
+
+        /* Project Cards */
+        .project-card {
+            position: relative;
+            flex: 0 0 auto;
+             width: 400px; /* Horizontal card size */
+            height: 550px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.3s ease-in-out;
+        }
+
+        /* Hover Effect - Display Information */
+        .project-card:hover img {
+            filter: brightness(40%);
+        }
+
+        .project-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            opacity: 0;
+            border-radius: 20px;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .project-card:hover .project-info {
+            opacity: 1;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .scroll-buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .scroll-button {
+            background-color: transparent;
+            color: #f5c107;
+            border: none;
+            font-size: 1.2rem;
+            padding: 5px;
+            cursor: pointer;
+            z-index: 100;
+            transition: opacity 0.3s ease;
+            opacity: 0.6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scroll-button:hover {
+            opacity: 1;
+        }
+
+
+        #scroll-left {
+            left: 20px;
+        }
+
+        #scroll-right {
+            right: 20px;
+        }
+
+        #awards {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .awards-container,
+        .certifications-container {
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 20px;
+            white-space: nowrap;
+            max-width: 90vw;
+        }
+
+        .awards-container::-webkit-scrollbar,
+        .certifications-container::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        /* Award & Certification Cards */
+        .award-card,
+        .certification-card {
+            position: relative;
+            flex: 0 0 auto;
+            width: 600px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            border-radius: 20px;
+        }
+
+        .certification-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .award-card img,
+        .certification-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .award-info {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        #team {
+            background: #f5c107; /* Yellow background */
+            padding: 50px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        /* .team-member {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        } */
+
+        /* .team-member:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .team-info h3 {
+            margin-bottom: 5px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .team-info p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .team-info a {
+            color: #daa60c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .team-info a:hover {
+            text-decoration: underline;
+        } */
+
+        blockquote {
+            font-style: italic;
+            color: #444;
+            margin-top: 10px;
+        }
+
+        /* .team-image {
+            flex: 0 0 200px;
+            border-radius: 30px;
+        }
+
+        .team-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        } */
+
+        #contact .btn-custom {
+            font-size: 1rem; /* Reduce button font size */
+            padding: 8px 20px; /* Adjust padding */
+            margin-bottom: 20px; /* Reduce gap between button and phone number */
+        }
+
+        /* Border light of text-boxes. */
+        .form-control:focus {
+            border-color: #ffd500 !important; /* Bright yellow */
+            box-shadow: 0 0 5px rgba(255, 213, 0, 0.8) !important; /* Equivalent glow effect */
+
+        }
+
+        /* Leader card amendments. */
+        .leader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .leader:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .leader-info {
+            flex: 1;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px; 
+        }
+
+    
+        .leader-info p {
+            margin: 8px 0; /* Reduce vertical space between paragraphs */
+            font-size: 1rem;
+            line-height: 1.4; /* Slightly reduce line spacing */
+        }
+
+        .leader-image {
+            flex: 0 0 250px;
+        }
+
+        .leader-image img {
+            width: 100%;
+            border-radius: 8%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-wrapper {
+            display: flex;
+            justify-content: center; /* Center-aligns the entire grid */
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .team-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-card img {
+            width: 100%;
+            max-width: 120px;
+            border-radius: 15%;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Text styling */
+
+        .text-styled {
+            color: #333; /* Dark gray for readability */
+            font-weight: bold;
+        }
+
+        .text-styled h3 {
+            color: #222; /* Slightly darker shade for headings */
+        }
+
+        .text-styled p {
+            color: #555; /* Medium gray for paragraphs */
+        }
+
+        .text-styled a {
+            color: #daa60c; /* Warm golden color for links */
+            text-decoration: none;
+        }
+
+        .text-styled a:hover {
+            text-decoration: underline;
+            color: #b67509; /* Slightly darker shade on hover */
+        }
+
+        #specialities {
+            text-align: center;
+            padding: 50px 20px;
+            height: 85vh;
+        }
+
+        .specialities-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates dynamic columns */
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .speciality-card {
+            width: 200px; /* Smaller size */
+            height: 200px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .speciality-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .speciality-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .speciality-card:hover {
+            transform: scale(1.05);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <header class="container-fluid d-flex justify-content-between align-items-centerr">
+        
+        <a href="#logo-section"><img src="Images/Nirk.png" alt="Nireeksha Engitech Logo" height="70 " class="me-auto"></a>
+        <nav>
+            <a href="#hero" class="mx-3 text-dark">About</a>
+            <a href="#specialities" class="mx-3 text-dark">Services</a>
+            <a href="#projects" class="mx-3 text-dark">Projects</a>
+            <a href="#awards" class="mx-3 text-dark">Awards</a>
+            <a href="#team" class="mx-3 text-dark">Team</a>
+            <a href="#contact" class="mx-3 text-dark">Contact</a>
+        </nav>
+    </header>
+
+    <section id="logo-section">
+        
+        <img src="Images/Nirk.png" alt="Nireeksha Engitech Logo">
+
+        <div class="btn-container">
+            <div class="btn-row">
+                <a href="#hero" class="btn btn-custom">About Us</a>
+                <a href="#specialities" class="btn btn-custom">Services</a>
+            </div>
+            <div class="btn-row">
+                <a href="#projects" class="btn btn-custom">Projects</a>
+                <a href="#awards" class="btn btn-custom">Awards</a>
+            </div>
+            <div class="btn-row">
+                <a href="#team" class="btn btn-custom">The Team</a>
+                <a href="#contact" class="btn btn-custom">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Hero Section -->
+    <section id="hero">
+        <h2 class="text-center mb-5" style="margin-top: -200px;">What We Do</h2>
+        <p class="lead" data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000">
+            Nireeksha Engitech Pvt. Ltd. is a dynamic and innovative engineering firm specializing in 
+            turnaround, maintenance, and project execution for the refinery, petrochemical, and fertilizer 
+            industries. With a proven track record, the company has successfully completed over 270 turnaround jobs, 
+            including more than 38 specialized projects such as revamps and turnarounds of the Reactor: Regenerator 
+            System (RRS) in RFCCU (Residual Fluid Catalytic Cracking Unit), PFCCU (Propylene Fluid Catalytic Cracking Unit), 
+            and ZFCCU (ZSM-5 Fluid Catalytic Cracking Unit). This extensive experience has earned the trust and satisfaction 
+            of prestigious clients, including IOCL, BPCL, HPCL, and RIL across PAN India. Formerly known as NEPL, Nireeksha 
+            Engitech Pvt. Ltd. was officially upgraded on May 15, 2024, expanding its global service reach from Nireeksha Inc. 
+            following the successful completion of multiple turnaround and project jobs. The company's workforce has grown 
+            significantly, scaling from 200 to 1600 skilled personnel to cater to end users such as RIL Jamnagar, IOCL Panipat 
+            Refinery, and IOCL Bongaigaon Refinery, reinforcing its commitment to excellence and reliability in the industry.
+        </p>
+        
+    </section>
+
+    <!-- Services Section -->
+    <!-- <section id="services" class="container container-spacing">
+        <h2 class="text-center mb-4 display">Our Services</h2>
+        <div class="row d-flex flex-column align-items-center">
+            <div class="col-md-8 mb-4">
+                <div class="service-card text-center p-4">
+                    <h3>Turnaround & Maintenance</h3>
+                    <p>Expert solutions for refinery shutdowns and mechanical maintenance.</p>
+                </div>
+            </div>
+            <div class="col-md-8 mb-4">
+                <div class="service-card text-center p-4">
+                    <h3>Heavy Erection Services</h3>
+                    <p>Specialized in heavy equipment installation and structural jobs.</p>
+                </div>
+            </div>
+            <div class="col-md-8 mb-4">
+                <div class="service-card text-center p-4">
+                    <h3>Emergency Breakdown Support</h3>
+                    <p>Rapid response teams for critical industrial breakdowns.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Services Section -->
+    <section id="specialities">
+        <h2 class="text-center mb-5">Our Services</h2>
+    
+        <div class="specialities-container">
+            <!-- Speciality Cards -->
+            <div class="speciality-card" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1500">
+                <img src="Images/speciality1.jpg" alt="Speciality 1">
+            </div>
+    
+            <div class="speciality-card" data-aos="fade-down" data-aos-delay="600" data-aos-duration="1500">
+                <img src="Images/speciality2.jpg" alt="Speciality 2">
+            </div>
+    
+            <div class="speciality-card" data-aos="fade-down" data-aos-delay="900" data-aos-duration="1500">
+                <img src="Images/speciality3.jpg" alt="Speciality 3">
+            </div>
+    
+            <div class="speciality-card" data-aos="fade-down" data-aos-delay="1200" data-aos-duration="1500">
+                <img src="Images/speciality4.jpg" alt="Speciality 4">
+            </div>
+    
+            <div class="speciality-card" data-aos="fade-down" data-aos-delay="1500" data-aos-duration="1500">
+                <img src="Images/speciality5.jpg" alt="Speciality 5">
+            </div>
+    
+            <div class="speciality-card" data-aos="fade-down" data-aos-delay="1800" data-aos-duration="1500">
+                <img src="Images/speciality6.jpg" alt="Speciality 6">
+            </div>
+
+            <div class="speciality-card" data-aos="fade-down" data-aos-delay="2100" data-aos-duration="1500">
+                <img src="Images/speciality6.jpg" alt="Speciality 7">
+            </div>
+
+            <div class="speciality-card" data-aos="fade-down" data-aos-delay="2400" data-aos-duration="1500">
+                <img src="Images/speciality6.jpg" alt="Speciality 8">
+            </div>
+        </div>
+        
+    </section>
+    
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="text-center mb-5">Success Stories</h2>
+
+            <div class="projects-container">
+                <div class="project-card" data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000">
+                    <img src="Images/prj1.jpg" alt="Project 1">
+                    <div class="project-info">Project 1: Innovative AI Solution</div>
+                </div>
+            
+                <div class="project-card" data-aos="fade-down" data-aos-delay="600" data-aos-duration="2000">
+                    <img src="Images/prj2.jpg.jpg" alt="Project 2">
+                    <div class="project-info">Project 2: Fintech System Optimization</div>
+                </div>
+            
+                <div class="project-card" data-aos="fade-down" data-aos-delay="900" data-aos-duration="2000">
+                    <img src="Images/prj3.jpg" alt="Project 3">
+                    <div class="project-info">Project 3: Market Expansion Strategy</div>
+                </div>
+
+                <div class="project-card" data-aos="fade-down" data-aos-delay="1200" data-aos-duration="2000">
+                    <img src="Images/prj3.jpg" alt="Project 3">
+                    <div class="project-info">Project 3: Market Expansion Strategy</div>
+                </div>
+
+                <div class="project-card" data-aos="fade-down" data-aos-delay="1500" data-aos-duration="2000">
+                    <img src="Images/prj3.jpg" alt="Project 3">
+                    <div class="project-info">Project 3: Market Expansion Strategy</div>
+                </div>
+
+            </div>
+        <div class="scroll-buttons-container">
+            <button id="scroll-left" class="scroll-button">◀</button>
+            <button id="scroll-right" class="scroll-button">▶</button>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards">
+        <h2 class="text-center mb-5">Engineering Excellence</h2>
+
+            <div class="certifications-container">
+                <!-- Certification Cards -->
+                <div class="certification-card" data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000">
+                    <img src="Images/cert1.jpg" alt="Certification 1">
+                </div>
+                
+                <div class="certification-card" data-aos="fade-down" data-aos-delay="600" data-aos-duration="2000">
+                    <img src="Images/cert2.jpg" alt="Certification 2">
+                </div>
+                
+                <div class="certification-card" data-aos="fade-down" data-aos-delay="900" data-aos-duration="2000">
+                    <img src="Images/cert3.jpg" alt="Certification 3">
+                </div>
+
+
+                <div class="certification-card" data-aos="fade-down" data-aos-delay="1200" data-aos-duration="2000">
+                    <img src="Images/cert3.jpg" alt="Certification 3">
+                </div>
+
+
+                <div class="certification-card" data-aos="fade-down" data-aos-delay="1500" data-aos-duration="2000">
+                    <img src="Images/cert3.jpg" alt="Certification 3">
+                </div>
+
+
+                <div class="certification-card" data-aos="fade-down" data-aos-delay="1800" data-aos-duration="2000">
+                    <img src="Images/cert3.jpg" alt="Certification 3">
+                </div>
+            </div>
+        
+            <div class="scroll-buttons-container">
+                <button id="scroll-left-awards" class="scroll-button">◀</button>
+                <button id="scroll-right-awards" class="scroll-button">▶</button>
+            </div>
+    </section>
+
+    <!-- For Projects Section -->
+    <script>
+        document.getElementById("scroll-left").addEventListener("click", function() {
+            document.querySelector(".projects-container").scrollLeft -= 300;
+        });
+        
+        document.getElementById("scroll-right").addEventListener("click", function() {
+            document.querySelector(".projects-container").scrollLeft += 300;
+        });
+    </script>
+
+     <!-- For Awards Section -->
+    <script>
+        document.getElementById("scroll-left-awards").addEventListener("click", function() {
+        document.querySelector(".certifications-container").scrollBy({ left: -300, behavior: "smooth" });
+    });
+
+    document.getElementById("scroll-right-awards").addEventListener("click", function() {
+        document.querySelector(".certifications-container").scrollBy({ left: 300, behavior: "smooth" });
+    });
+
+    </script>
+
+
+    <section id="team">
+        <h2 class="text-center mb-5">Meet The Team</h2>
+        
+            <div class="leader" data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000">
+                <div class="leader-info text-styled">
+                    <h3>Mr. Sanjeev Choudhary</h3>
+                    <p><i class="fas fa-briefcase"></i> <strong>Founder</strong></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
+                    <blockquote>"Leading with innovation and passion to drive success.
+                        Leading with innovation and passion to drive success.
+                        Leading with innovation and passion to drive success.
+                        Leading with innovation and passion to drive success.
+                        Leading with innovation and passion to drive success."</blockquote>
+                </div>
+                <div class="leader-image">
+                    <img src="Images/john_doe.jpg" alt="John Doe">
+                </div>
+            </div>
+            <div class="team-grid">
+                <div class="team-card text-styled" data-aos="fade-down" data-aos-delay="600" data-aos-duration="2000">
+                    <img src="Images/jane_smith.jpg" alt="Jane Smith">
+                    <h3>Jane Smith</h3>
+                    <p><i class="fas fa-briefcase"></i> <strong>Project Manager</strong></p>
+                </div>
+            
+                <div class="team-card text-styled" data-aos="fade-down" data-aos-delay="800" data-aos-duration="2000">
+                    <img src="Images/michael_jones.jpg" alt="Michael Jones">
+                    <h3>Michael Jones</h3>
+                    <p><i class="fas fa-briefcase"></i> <strong>Lead Developer</strong></p>
+                </div>
+            
+                <div class="team-card text-styled" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="2000">
+                    <img src="Images/sarah_lee.jpg" alt="Sarah Lee">
+                    <h3>Sarah Lee</h3>
+                    <p><i class="fas fa-briefcase"></i> <strong>Marketing Head</strong></p>
+                </div>
+            </div>
+            
+
+            <!-- <div class="team-member">
+                <div class="team-info">
+                    <h3>John Doe</h3>
+                    <p><strong>Position:</strong> Chief Engineer</p>
+                    <p><strong>Email:</strong> <a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
+                    <blockquote>"Innovation and precision drive our success."</blockquote>
+                </div>
+                <div class="team-image">
+                    <img src="Images/john_doe.jpg" alt="John Doe">
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-info">
+                    <h3>Jane Smith</h3>
+                    <p><strong>Position:</strong> Project Manager</p>
+                    <p><strong>Email:</strong> <a href="mailto:janesmith@example.com">janesmith@example.com</a></p>
+                    <blockquote>"Efficiency and strategy define our journey."</blockquote>
+                </div>
+                <div class="team-image">
+                    <img src="Images/jane_smith.jpg" alt="Jane Smith">
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-info">
+                    <h3>Jane Smith</h3>
+                    <p><strong>Position:</strong> Project Manager</p>
+                    <p><strong>Email:</strong> <a href="mailto:janesmith@example.com">janesmith@example.com</a></p>
+                    <blockquote>"Efficiency and strategy define our journey."</blockquote>
+                </div>
+                <div class="team-image">
+                    <img src="Images/jane_smith.jpg" alt="Jane Smith">
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-info">
+                    <h3>Jane Smith</h3>
+                    <p><strong>Position:</strong> Project Manager</p>
+                    <p><strong>Email:</strong> <a href="mailto:janesmith@example.com">janesmith@example.com</a></p>
+                    <blockquote>"Efficiency and strategy define our journey."</blockquote>
+                </div>
+                <div class="team-image">
+                    <img src="Images/jane_smith.jpg" alt="Jane Smith">
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-info">
+                    <h3>Jane Smith</h3>
+                    <p><strong>Position:</strong> Project Manager</p>
+                    <p><strong>Email:</strong> <a href="mailto:janesmith@example.com">janesmith@example.com</a></p>
+                    <blockquote>"Efficiency and strategy define our journey."</blockquote>
+                </div>
+                <div class="team-image">
+                    <img src="Images/jane_smith.jpg" alt="Jane Smith">
+                </div>
+            </div> -->
+
+    </section>
+        
+
+    <!-- Contact Section -->
+    <!-- <section id="contact" class="container container-spacing">
+        <h2 class="text-center mb-5">Get in Touch</h2>
+        <div class="row d-flex flex-column align-items-center">
+            <div class="col-md-8 mb-4">
+                <div class="service-card text-center p-4">
+                    <p><a href="info@nireekshaengitech.com" style="font-size: 1.2rem;">Mail Us</a></p>
+                    <p>Phone: +91 9876543210</p>
+                    <p>Location: Vadodara, Gujarat, India</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="contact" class="container container-spacing">
+        <h2 class="text-center mb-5" style="margin-top: -50px;">Get In Touch</h2>
+        <div class="row d-flex flex-column align-items-center">
+            <div class="col-md-8 mb-4">
+                <div class="service-card text-center p-4" data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000">
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <input style = "border-radius: 10px;" type="text" id="subject" class="form-control" placeholder="Enter Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea style = "border-radius: 15px;" id="message" class="form-control" rows="6" placeholder="Enter Your Message" required></textarea>
+                        </div>
+                        <button type="button" onclick="sendMail()" class="btn btn-custom">Send <i class="fas fa-envelope"></i></button>
+                    </form>
+                    <!-- <p class="mt-3">Phone: +91 9876543210</p> -->
+                    <p><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 9876543210</a></p>
+                    <p style="font-size: 1rem;"><i class="fas fa-map-pin"></i>  Vadodara, Gujarat, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Section Functionality -->
+    <script>
+        function sendMail() {
+        let subject = document.getElementById("subject").value;
+        let message = document.getElementById("message").value;
+        let mailtoLink = `mailto:info@nireekshaengitech.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+        window.location.href = mailtoLink;
+    }
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Nireeksha Engitech Pvt. Ltd. All rights reserved.</p>
+        <p style="margin-top: -10px;"><a href="policy.html" style="color: white;">Privacy Policy</a> | <a href="terms.html" style="color: white;">Terms of Service</a></p>
+    </footer>
+
+    <!-- Header Functionality Control -->
+    <script>
+    document.addEventListener("scroll", function () {
+        let header = document.querySelector("header");
+        let heroSection = document.getElementById("hero");
+        let scrollPosition = window.scrollY;
+    
+        if (scrollPosition > heroSection.clientHeight - 50) {
+            header.style.opacity = "1";  // Show header
+            header.style.pointerEvents = "all";
+        } else {
+            header.style.opacity = "0";  // Hide header
+            header.style.pointerEvents = "none";
+        }
+    });
+
+    <!-- Card and logo animation. -->
+    AOS.init();
+
+
+    // Animation for changing backgrounds in the landing page.
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const ctaSection = document.getElementById("logo-section");
+    const images = [
+        "Images/prj1.jpg",
+        "Images/FrontPg.png",
+        "Images/prj3.jpg",
+        //"Images/bg4.jpg"
+    ];
+    
+    let index = 0;
+
+    function changeBackground() {
+            const nextIndex = (index + 1) % images.length;
+            const nextImage = images[nextIndex];
+
+            // Preload the next image
+            const img = new Image();
+            img.src = nextImage;
+            img.onload = function () {
+                // Step 1: Create a fading overlay
+                const transitionLayer = document.createElement("div");
+                transitionLayer.style.position = "absolute";
+                transitionLayer.style.top = "0";
+                transitionLayer.style.left = "0";
+                transitionLayer.style.width = "100%";
+                transitionLayer.style.height = "100%";
+                transitionLayer.style.backgroundImage = `url(${nextImage})`;
+                transitionLayer.style.background = `
+                    linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(234, 229, 229, 0.95)50%, rgba(255, 255, 255, 0) 100%),
+                    url(${nextImage})`;
+                transitionLayer.style.backgroundSize = "cover";
+                transitionLayer.style.backgroundPosition = "center";
+                transitionLayer.style.opacity = "0";
+                transitionLayer.style.transition = "opacity 1.5s ease-in-out";
+                transitionLayer.style.zIndex = "-1";
+
+                // Append overlay
+                ctaSection.appendChild(transitionLayer);
+
+                // Step 2: Fade in the new image
+                setTimeout(() => {
+                    transitionLayer.style.opacity = "1";
+
+                    setTimeout(() => {
+                        // Step 3: Set new background and remove overlay
+                        ctaSection.style.backgroundImage = `url(${nextImage})`;
+                        ctaSection.removeChild(transitionLayer);
+
+                        index = nextIndex;
+                    }, 1500); // Matches transition time
+                }, 50);
+            };
+    }
+
+    // Change background every 3 seconds while user is on the section
+    let interval;
+    
+    function startBackgroundChange() {
+        if (!interval) {
+            interval = setInterval(changeBackground, 5000);
+        }
+    }
+    
+    function stopBackgroundChange() {
+        clearInterval(interval);
+        interval = null;
+    }
+    
+    // Detect when user is on the CTA section
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startBackgroundChange();
+            } else {
+                stopBackgroundChange();
+            }
+        });
+    }, { threshold: 0.5 }); // 50% of the section should be visible to trigger
+
+    observer.observe(ctaSection);
+
+        // Initial background setup
+        changeBackground();
+    });
+
+    </script>
+    
+    
+</body>
+</html>

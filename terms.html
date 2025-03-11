@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nireeksha Engitech</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+    <style>
+
+        html, body {
+            min-height: 100vh;
+            width: 100%;
+            overflow-x: hidden; /* Prevents horizontal overflow */
+        }
+
+        /* Prevent sections from overflowing */
+        section {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafa;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            left: 0;
+            right: 0;
+            transition: box-shadow 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .shadow-active {
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            margin-top: auto;
+            width: 100%;
+            height: 9vh;
+        }
+
+        .container {
+            text-align: left; /* Ensure the whole section is left-aligned */
+            overflow-x: hidden;
+        }
+
+        .container-spacing {
+            padding: 100px 0;
+        }
+
+        .btn-custom {
+            background-color: white;
+            color: #daa850;
+            border: 2px solid #daa60c; /* Adds a border */
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border-radius: 30px;
+            transition: transform 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+            min-width: 200px;
+            margin-top: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-custom:hover {
+            background-color: #daa60c;
+            color: white;
+            transform: scale(1.08);
+            border: 2px solid #daa60c;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-custom:active {
+            border-color: #daa60c;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px; /* Adjust spacing between buttons */
+        }
+
+        .btn-row {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            font-size: 1.2rem; /* Adjust size as needed */
+            padding-top: 22px;
+            display: inline-block;
+            text-decoration: none;
+            color: #daa60c;
+        }
+
+        nav a:hover {
+            color: #ffd500; /* Lighter shade on hover */
+            text-decoration: underline; /* Optional effect */
+        }
+
+        h2 {
+            font-size: 2.5rem; /* Adjust as needed */
+            font-size: 'Arial', sans-serif;
+
+        }
+
+        section {
+            scroll-margin-top: 100px; /* Adjust this value based on header height */
+            padding-top: 50px; /* Adds space at the top */
+        }
+
+        blockquote {
+            font-style: italic;
+            color: #444;
+            margin-top: 10px;
+        }
+
+        .text-styled {
+            color: #333; /* Dark gray for readability */
+            font-weight: bold;
+        }
+
+        .text-styled h3 {
+            color: #222; /* Slightly darker shade for headings */
+        }
+
+        .text-styled p {
+            color: #555; /* Medium gray for paragraphs */
+        }
+
+        .text-styled a {
+            color: #daa60c; /* Warm golden color for links */
+            text-decoration: none;
+        }
+
+        .text-styled a:hover {
+            text-decoration: underline;
+            color: #b67509; /* Slightly darker shade on hover */
+        }
+
+        #hero {
+            background: white;
+            color: black;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 270px;
+            padding-bottom: 40px;
+            padding-top: 150px;
+        }
+
+        .rounded-bullets li {
+            list-style: none; /* Removes default bullet */
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .rounded-bullets li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 5px;
+            background: black; /* Red bullet */
+            border-radius: 50%; /* Makes it a circle */
+        }
+
+        .pt-h3 {
+            font-size: 1.5rem; /* Same as h3 */
+        }
+
+        .pt-h4 {
+            font-size: 1.4rem; /* Same as h4 */
+            list-style-type: upper-roman;
+        }
+
+        main {
+            flex: 1; /*Pushing the footer to the bottom */
+        }
+
+
+</style>
+
+</head>
+
+<body>
+
+    <header class="container-fluid d-flex justify-content-between align-items-centerr">
+        
+        <a href="index.html#logo-section"><img src="Images/Nirk.png" alt="Nireeksha Engitech Logo" height="70 " class="me-auto"></a>
+        <nav>
+            <a href="index.html#hero" class="mx-3 text-dark">About</a>
+            <a href="index.html#specialities" class="mx-3 text-dark">Services</a>
+            <a href="index.html#projects" class="mx-3 text-dark">Projects</a>
+            <a href="index.html#awards" class="mx-3 text-dark">Awards</a>
+            <a href="index.html#team" class="mx-3 text-dark">Team</a>
+            <a href="index.html#contact" class="mx-3 text-dark">Contact</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2 class="text-center mb-5" >Terms of Service</h2>
+        <div class="container">
+            <p><strong>Effective Date:</strong> March 9, 2025</p>
+            <p>
+                Welcome to Nireeksha Engitech Pvt. Ltd. ("we," "our," or "us"). These Terms of Service ("Terms") govern your 
+                use of our website and services. By accessing or using our services, you agree to comply with these Terms. 
+                If you do not agree, please do not use our services.
+            </p>
+            <ol>
+                <li class="pt-h3" style="margin-top: 40px;">
+                    <h3>Use of Our Services</h3>
+                </li>
+                    <ol>
+                        <li class="pt-h4">
+                            <h4>Eligibility</h4>
+                        </li>
+                        <p>
+                            You must be at least 18 years old to use our services. By using our services, you confirm that you meet this requirement.
+                        </p>
+
+                        <li class="pt-h4" style="margin-top: 20px;">
+                            <h4>Permitted Use</h4>
+                        </li>
+                        <p>
+                            You agree to use our services only for lawful purposes and in compliance with these Terms. You may not:
+                        </p>
+
+                        <ul class="rounded-bullets">
+                            <li>Use the services in any way that violates applicable Indian laws or regulations.</li>
+                            <li>Interfere with or disrupt the integrity or performance of our services.</li>
+                            <li>Attempt to gain unauthorized access to our systems or data.</li>
+                        </ul>
+
+                    </ol>
+
+                <li class="pt-h3" style="margin-top: 40px;">
+                    <h3>Intellectual Property</h3>
+                </li>
+
+                <p>
+                    All content on our website, including text, graphics, logos, and images, is the property of Nireeksha Engitech Pvt. 
+                    Ltd. or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not use, 
+                    reproduce, or distribute any content without our prior written permission.
+                </p>
+
+                <li class="pt-h3" style="margin-top: 40px;">
+                    <h3>Limitation of Liability</h3>
+                </li>
+                <p>
+                    To the fullest extent permitted by law, Nireeksha Engitech Pvt. Ltd. shall not be liable for any indirect, incidental, 
+                    special, or consequential damages arising out of or in connection with your use of our services. Our total 
+                    liability to you for any claims arising under these Terms shall not exceed the amount you paid (if any) 
+                    for using our services.
+                </p>
+
+                <li class="pt-h3" style="margin-top: 40px;">
+                    <h3>Third-Party Links</h3>
+                </li>
+
+                <p>
+                    Our website may contain links to third-party websites or services. We are not responsible for the content, policies, or practices 
+                    of these third-party sites. Access them at your own risk.
+                </p>
+
+                <li class="pt-h3" style="margin-top: 40px;">
+                    <h3>Termination</h3>
+                </li>
+
+                <p>
+                    We reserve the right to suspend or terminate your access to our services at any time, without notice, 
+                    if you violate these Terms or engage in activities that harm our business or users.
+                </p>
+
+                <li class="pt-h3" style="margin-top: 40px;">
+                    <h3>Changes to These Terms</h3>
+                </li>
+
+                <p>
+                    We may update these Terms from time to time. Any changes will be posted on this page with an updated effective date. 
+                    Your continued use of our services constitutes acceptance of the updated Terms.
+                </p>
+
+                <li class="pt-h3" style="margin-top: 40px;">
+                    <h3>Governing Law</h3>
+                </li>
+                <p>
+                    These Terms shall be governed by and construed in accordance with the laws of India, 
+                    without regard to its conflict of law principles.
+                </p>
+
+                <li class="pt-h3" style="margin-top: 40px;">
+                    <h3>Contact Us</h3>
+                </li>
+                <p>
+                    If you have any questions about these Terms or our services, please contact us at:
+                </p>
+                <p>
+                    Email: <a href="mailto:info@nireekshaengitech.com" style="color: black;">info@nireekshaengitech.com</a>
+                </p>
+                <p>
+                    Phone: <a href="tel:+919876543210" style="color: black;">+91 9876543210</a>
+                </p>
+
+
+            </ol>
+
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nireeksha Engitech Pvt. Ltd. All rights reserved.</p>
+        <p style="margin-top: -10px;"><a href="policy.html" style="color: white;">Privacy Policy</a> | <a href="terms.html" style="color: white;">Terms of Service</a></p>
+    </footer>
+
+</body>
+
+</html>
