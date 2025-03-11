@@ -629,17 +629,15 @@
         /* Mobile-Friendly Settings */
 /* ----------------------------------------------- */
         @media screen and (max-width: 1024px) {
-        
+
             /* Header & Navigation */
             header {
-                height: 60px; /* Smaller height */
-                max-width: 90%; /* Reduce the width to 90% of the screen */
-                margin: 0 auto; /* Center the header */
-                padding: 5px 10px;
+                height: 60px; /* Perfect fit for the top */
+                width: 100%; /* Full width */
+                padding: 0 15px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                width: 100%;
                 background: white;
                 position: fixed;
                 top: 0;
@@ -648,19 +646,19 @@
                 z-index: 1000;
                 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             }
-        
+            
             /* Logo - Align to left */
             header a img {
                 height: 50px;
                 margin-left: 10px;
             }
-        
-            /* Hide the default navigation links */
+            
+            /* Hide default navigation */
             nav {
                 display: none;
             }
-        
-            /* Mobile menu button (Hamburger Menu) */
+            
+            /* Mobile menu button */
             .mobile-menu-btn {
                 display: block;
                 font-size: 1.8rem;
@@ -671,12 +669,12 @@
                 padding: 10px;
                 margin-right: 15px;
             }
-        
+            
             /* Dropdown Menu */
             .mobile-nav {
                 display: none;
                 position: absolute;
-                top: 60px; /* Position it below the header */
+                top: 60px; /* Positioned just below the header */
                 right: 0;
                 background: white;
                 width: 200px;
@@ -684,7 +682,8 @@
                 border-radius: 5px;
                 text-align: left;
             }
-        
+            
+            /* Navigation links */
             .mobile-nav a {
                 display: block;
                 padding: 12px;
@@ -693,19 +692,21 @@
                 font-size: 1rem;
                 border-bottom: 1px solid #f0f0f0;
             }
-        
+            
+            /* Hover effect */
             .mobile-nav a:hover {
                 background: #f8f8f8;
             }
-        
+            
             /* Show dropdown menu when active */
             .mobile-nav.active {
                 display: block;
             }
+
         
             /* Hero Section */
             #hero {
-                height: auto;
+                height: 200vh;
                 padding: 50px 20px;
                 text-align: center;
             }
