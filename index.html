@@ -1440,96 +1440,67 @@
         }
     });
 
-    <!-- Card and logo animation. -->
+    //<!-- Card and logo animation. -->
     AOS.init();
 
-
-    // Animation for changing backgrounds in the landing page.
-
+ // Landing page animation
     document.addEventListener("DOMContentLoaded", function () {
     const ctaSection = document.getElementById("logo-section");
     const images = [
         "Images/prj1.jpg",
         "Images/FrontPg.png",
-        "Images/prj3.jpg",
-        //"Images/bg4.jpg"
+        "Images/prj3.jpg"
     ];
-    
-    let index = 0;
+
+    let index = 0; // Start from the first image
 
     function changeBackground() {
-            const nextIndex = (index + 1) % images.length;
-            const nextImage = images[nextIndex];
+        // Cycle through images (loops back to the first image)
+        index = (index + 1) % images.length;
+        const nextImage = images[index];
 
-            // Preload the next image
-            const img = new Image();
-            img.src = nextImage;
-            img.onload = function () {
-                // Step 1: Create a fading overlay
-                const transitionLayer = document.createElement("div");
-                transitionLayer.style.position = "absolute";
-                transitionLayer.style.top = "0";
-                transitionLayer.style.left = "0";
-                transitionLayer.style.width = "100%";
-                transitionLayer.style.height = "100%";
-                transitionLayer.style.backgroundImage = `url(${nextImage})`;
-                transitionLayer.style.background = `
-                    linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(234, 229, 229, 0.95)50%, rgba(255, 255, 255, 0) 100%),
-                    url(${nextImage})`;
-                transitionLayer.style.backgroundSize = "cover";
-                transitionLayer.style.backgroundPosition = "center";
-                transitionLayer.style.opacity = "0";
-                transitionLayer.style.transition = "opacity 1.5s ease-in-out";
-                transitionLayer.style.zIndex = "-1";
+        // Preload the next image
+        const img = new Image();
+        img.src = nextImage;
+        img.onload = function () {
+            // Create a fading overlay
+            const transitionLayer = document.createElement("div");
+            transitionLayer.style.position = "absolute";
+            transitionLayer.style.top = "0";
+            transitionLayer.style.left = "0";
+            transitionLayer.style.width = "100%";
+            transitionLayer.style.height = "100%";
+            transitionLayer.style.background = `
+                linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(234, 229, 229, 0.95) 50%, rgba(255, 255, 255, 0) 100%),
+                url(${nextImage})`;
+            transitionLayer.style.backgroundSize = "cover";
+            transitionLayer.style.backgroundPosition = "center";
+            transitionLayer.style.opacity = "0";
+            transitionLayer.style.transition = "opacity 1.5s ease-in-out";
+            transitionLayer.style.zIndex = "-1";
 
-                // Append overlay
-                ctaSection.appendChild(transitionLayer);
+            // Append overlay
+            ctaSection.appendChild(transitionLayer);
 
-                // Step 2: Fade in the new image
+            // Fade in the new image
+            setTimeout(() => {
+                transitionLayer.style.opacity = "1";
+
                 setTimeout(() => {
-                    transitionLayer.style.opacity = "1";
-
-                    setTimeout(() => {
-                        // Step 3: Set new background and remove overlay
-                        ctaSection.style.backgroundImage = `url(${nextImage})`;
-                        ctaSection.removeChild(transitionLayer);
-
-                        index = nextIndex;
-                    }, 1500); // Matches transition time
-                }, 50);
-            };
+                    // Apply new background and remove overlay
+                    ctaSection.style.backgroundImage = `url(${nextImage})`;
+                    ctaSection.removeChild(transitionLayer);
+                }, 1500); // Matches transition time
+            }, 50);
+        };
     }
 
-    // Change background every 3 seconds while user is on the section
-    let interval;
-    
-    function startBackgroundChange() {
-        if (!interval) {
-            interval = setInterval(changeBackground, 5000);
-        }
-    }
-    
-    function stopBackgroundChange() {
-        clearInterval(interval);
-        interval = null;
-    }
-    
-    // Detect when user is on the CTA section
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                startBackgroundChange();
-            } else {
-                stopBackgroundChange();
-            }
-        });
-    }, { threshold: 0.5 }); // 50% of the section should be visible to trigger
+    // Change background every 5 seconds continuously
+    setInterval(changeBackground, 5000);
 
-    observer.observe(ctaSection);
-
-    // Initial background setup
-        changeBackground();
-    });
+    // Start changing background immediately on page load
+    changeBackground();
+});
 
     // Click effect for projects on mobile.
     document.addEventListener("DOMContentLoaded", function () {
