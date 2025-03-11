@@ -825,6 +825,30 @@
                 justify-content: space-between;
                 text-align: center;
             }
+
+             .project-card.active .project-info {
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+            }
+        
+            /* Disable Any Background That Might Be Causing the White Slate */
+            .project-card .overlay {
+                background: transparent !important;
+            }
+
+            .project-card:active .project-info {
+                opacity: 1 !important; /* Make text fully visible */
+                visibility: visible !important;
+                color: white !important; /* Ensure text is readable */
+                background: rgba(0, 0, 0, 0.5) !important; /* Ensure good contrast */
+                text-align: center;
+                padding: 15px;
+                border-radius: 10px;
+                width: 90%;
+                margin: auto;
+            }
+
         
             /* Ensuring Card Images Fully Cover */
             .project-card img {
@@ -1089,7 +1113,7 @@
                 font-size: 2rem !important;
                 text-indent: 0;
                 position: absolute;
-                left: 40%;
+                left: 20%;
                 transform: translateX(-50%);
             }
         
@@ -1111,7 +1135,7 @@
                 font-size: 2rem !important;
                 text-indent: 0;
                 position: absolute;
-                left: 40%;
+                left: 20%;
                 transform: translateX(-50%);
             }
 
