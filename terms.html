@@ -187,18 +187,19 @@
             list-style: none; /* Removes default bullet */
             position: relative;
             padding-left: 20px;
+            font-size: 1rem;
+            line-height: 1.5; /* Ensures even spacing */
         }
-
+        
         .rounded-bullets li::before {
             content: "";
             position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 5px;
-            height: 5px;
-            background: black; /* Red bullet */
-            border-radius: 50%; /* Makes it a circle */
+            left: -8px; /* Moves bullets slightly left */
+            top: 0.6em; /* Aligns with the first line of text */
+            width: 8px; /* Makes bullets more visible */
+            height: 8px;
+            background: black;
+            border-radius: 50%;
         }
 
         .pt-h3 {
@@ -225,7 +226,14 @@
         }
 
          /* ----------------For Mobile Screen-------------- */
+
         @media screen and (max-width: 1024px) {
+
+            html, body {
+                width: 100%;
+                overflow-x: hidden !important;
+            }
+
 
             header {
                 height: 100px;
@@ -243,7 +251,7 @@
                 display: none !important;
             }
 
-/* Hero Section */
+            /* Hero Section */
             #hero {
                 height: auto; /* Allow it to size dynamically */
                 min-height: 150vh; /* Just fill one full screen */
@@ -255,7 +263,7 @@
                 padding-top: 150px !important; /* Move everything down */
             }
 
-/* Ensuring sections don’t touch screen edges */
+            /* Ensuring sections don’t touch screen edges */
             section {
                 padding: 40px 15px;
                 width: 100vw; /* Ensure it fits exactly */
@@ -263,15 +271,40 @@
                 overflow: hidden;
             }
 
-        footer {
-                        width: 100vw;
-                        height: auto;
-                        padding: 10px;
-                        text-align: center;
-                    }
+            footer {
+                width: 100vw;
+                height: auto;
+                padding: 10px;
+                text-align: center;
+            }
 
-
-           }
+            .btn-custom {
+                font-size: 1rem !important;
+                padding: 10px 20px !important;
+                min-width: 150px !important; /* Make them fit better */
+            }
+        
+            /* Center navigation links and adjust font size */
+            nav a {
+                font-size: 1rem !important; /* Reduce font size */
+                display: block !important;
+                padding: 8px !important;
+            }
+        
+            /* Improve bullet point readability */
+            .rounded-bullets li {
+                padding-left: 18px !important; /* Ensures proper spacing */
+                font-size: 1rem !important;
+                line-height: 1.4 !important; /* Helps align multi-line text */
+            }
+            
+            .rounded-bullets li::before {
+                left: -15px !important; /* Moves bullets left, but keeps alignment */
+                width: 6px !important; /* Slightly larger bullets for visibility */
+                height: 6px !important;
+                top: 0.65em !important; /* Keeps bullets aligned with text */
+            }
+        }
 
 </style>
 
