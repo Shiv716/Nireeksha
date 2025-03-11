@@ -610,8 +610,9 @@
             /* Hero Section */
             #hero {
                 height: auto; /* Allow it to size dynamically */
-                min-height: 100vh; /* Ensure it at least fills the screen */
+                min-height: 350vh; /* Ensure it at least fills the screen */
             }
+            
             #specialities {
                 height: auto;
                 min-height: 100vh;
@@ -905,7 +906,63 @@
                 color: inherit !important;
                 background-color: inherit !important;
             }
+
+            .scroll-buttons-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                margin-top: 10px;
+            }
             
+            .scroll-button {
+                background-color: transparent !important;
+                color: #f5c107 !important; /* Keep same color as desktop */
+                border: none !important;
+                font-size: 1.2rem !important; /* Ensure same size */
+                padding: 5px !important;
+                cursor: pointer;
+                z-index: 100;
+                opacity: 0.6;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: opacity 0.3s ease-in-out;
+            }
+            
+            .scroll-button:hover {
+                opacity: 1 !important; /* Maintain hover effect */
+            }
+            
+            .leader {
+                display: flex;
+                flex-direction: column; /* Stack image & text */
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+                width: 90%;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+            
+            .leader-info {
+                padding: 10px;
+                text-align: center;
+            }
+            
+            .leader-image {
+                width: 100%;
+                max-width: 250px;
+                margin-top: 15px;
+            }
+            
+            .leader-image img {
+                width: 100%;
+                border-radius: 8%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+
         }
 /* ----------------------------------------------- */
 
