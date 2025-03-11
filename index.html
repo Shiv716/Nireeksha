@@ -584,7 +584,7 @@
             }
 
             #logo-section img {
-                max-width: 120px;
+                max-width: 350px;
             }
                     
             /* Navigation */
@@ -606,7 +606,7 @@
             /* Hero Section */
             #hero {
                 height: auto; /* Allow it to size dynamically */
-                min-height: 200vh; /* Ensure it at least fills the screen */
+                min-height: 175vh; /* Ensure it at least fills the screen */
             }
             
             #specialities {
@@ -942,15 +942,26 @@
                 background: white;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 margin: 0 auto 20px;
+                overflow: hidden; /* Prevents unwanted stretching */
             }
             
             .leader-image {
                 order: -1; /* Moves image to the beginning */
-                width: 100%;
-                max-width: 120px; /* Match other team members */
-                border-radius: 15%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 120px; /* Set exact size */
+                height: 120px; /
+                border-radius: 50%;
+                overflow: hidden;
                 margin-bottom: 10px; /* Moves image to top */
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            }
+
+            .leader-image img {
+                width: 100%;
+                height: auto; /* Maintain aspect ratio */
+                object-fit: cover; /* Prevents stretching */
             }
             
             .leader-info {
