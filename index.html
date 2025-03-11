@@ -1047,24 +1047,21 @@
             }
 
             #message {
-                width: 100%; /* Full width */
-                max-width: 400px; /* Prevents it from becoming too wide */
-                height: 120px; /* Normal height */
+                width: 100%; /* Ensure full width */
+                max-width: 500px; /* Increase width */
+                height: 200px; /* Increase height */
                 font-size: 1rem; /* Standard text size */
-                padding: 10px;
-                border-radius: 8px; /* Keeps a soft border */
-                resize: vertical; /* Allows user to adjust height if needed */
+                padding: 12px;
+                border-radius: 8px; /* Soft rounded corners */
+                resize: vertical; /* Allow user to adjust height if needed */
             }
 
-            #contact-form button,
-            #contact-form button:visited,
-            #contact-form button:active,
-            #contact-form button:focus {
-                color: inherit !important; /* Keeps original text color */
-                background-color: inherit !important; /* Prevents color change */
-                border-color: inherit !important; /* Keeps border the same */
+            #contact-form button {
+                color: initial !important; /* Retains default text color */
+                background-color: initial !important; /* Retains default background */
+                border-color: initial !important; /* Retains default border */
                 outline: none !important; /* Removes focus outline */
-                box-shadow: none !important; /* Prevents button click effects */
+                box-shadow: none !important; /* Prevents unwanted effects */
             }
 
         }
