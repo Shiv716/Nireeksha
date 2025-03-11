@@ -582,7 +582,15 @@
             #logo-section img {
                 max-width: 380px;
             }
-                    
+
+            .award-card img,
+            .certification-card img {
+                width: 100%; /* Make sure it fills the card */
+                height: 100%; /* Ensures it covers the full height */
+                object-fit: cover; /* Prevents distortion and fills the card */
+                border-radius: 10px; /* Keep smooth rounded edges */
+            }
+               
             /* Navigation */
             nav {
                 display: flex;
@@ -602,7 +610,7 @@
             /* Hero Section */
             #hero {
                 height: auto; /* Allow it to size dynamically */
-                min-height: 170vh; /* Just fill one full screen */
+                min-height: 130vh; /* Just fill one full screen */
                 display: flex;
                 flex-direction: column;
                 justify-content: center; /* Center content vertically */
@@ -620,7 +628,7 @@
 
             .speciality-card {
                 width: 100%; /* Make it take full available width */
-                max-width: 350px; /* Match other cards */
+                max-width: 330px; /* Match other cards */
                 height: auto; /* Let it adjust naturally */
                 margin: 0 auto 20px; /* Center it and add spacing */
             }
@@ -960,8 +968,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 120px; /* Set exact size */
-                height: 120px;
+                width: 150px; /* Set exact size */
+                height: 150px;
                 border-radius: 50%;
                 overflow: hidden;
                 margin-bottom: 10px; /* Moves image to top */
