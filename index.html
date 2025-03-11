@@ -52,23 +52,6 @@
             
         }
 
-        /* #hero:hover {
-            transform: scale(1.05);
-        } */
-
-        /* .service-card {
-            border-radius: 10px;
-            background: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        } */
-
         footer {
             background: #222;
             color: white;
@@ -574,7 +557,7 @@
         @media screen and (max-width: 1024px) {
 
             header {
-                height: 60px;
+                height: 70px;
                 padding: 5px;
                 width: 100vw;
                 display: flex;
@@ -589,7 +572,6 @@
                 display: none !important;
             }
 
-
             /* Reduce logo size in the logo section */
             #logo-section .btn-custom, 
             #logo-section .btn-custom:visited, 
@@ -599,6 +581,10 @@
                 color: #daa850 !important; /* Original color */
                 background-color: white !important;
                 text-decoration: none !important;
+            }
+
+            #logo-section img {
+                max-width: 120px;
             }
                     
             /* Navigation */
@@ -620,7 +606,7 @@
             /* Hero Section */
             #hero {
                 height: auto; /* Allow it to size dynamically */
-                min-height: 100vh; /* Ensure it at least fills the screen */
+                min-height: 200vh; /* Ensure it at least fills the screen */
             }
             
             #specialities {
@@ -959,6 +945,7 @@
             }
             
             .leader-image {
+                order: -1; /* Moves image to the beginning */
                 width: 100%;
                 max-width: 120px; /* Match other team members */
                 border-radius: 15%;
