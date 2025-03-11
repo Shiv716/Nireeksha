@@ -709,6 +709,13 @@
         transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
         pointer-events: none;
     }
+            .project-card .project-info {
+                text-align: center !important; /* ✅ Ensure text is centered */
+                display: flex !important; /* ✅ Use flexbox for centering */
+                justify-content: center !important; /* ✅ Horizontally center text */
+                align-items: center !important; /* ✅ Vertically center text */
+                flex-direction: column; /* ✅ Stack text properly */
+            }
 
     /* ✅ Darken Image on Active */
     .project-card.active img {
