@@ -699,7 +699,7 @@
                 opacity: 0; /* Hide text */
                 visibility: hidden;
                 color: white !important;
-                background: rgba(0, 0, 0, 0.8) !important;
+                background: rgba(0, 0, 0, 0.5) !important;
                 text-align: center;
                 padding: 15px;
                 border-radius: 10px;
@@ -725,6 +725,13 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 10 !important;
+                display: flex !important; 
+                flex-direction: column !important; 
+                align-items: center !important; 
+                justify-content: center !important;
+                text-align: center !important; 
+                width: 100% !important;
+                height: 100% !important;
             }
         
             /* When JavaScript Adds .active Class, Show Text */
@@ -1103,9 +1110,10 @@
 
             .scroll-buttons-container {
                 display: flex !important;
-                justify-content: space-between !important;
+                justify-content: center !important;
                 align-items: center !important;
                 width: 100%;
+                gap: 5px !important;
                 position: relative !important;
                 margin-top: 15px !important;
             }
