@@ -697,46 +697,43 @@
             }
                 
            .project-card .project-info {
-        opacity: 0; /* Hide text */
-        visibility: hidden;
-        color: white !important;
-        background: rgba(0, 0, 0, 0.8) !important;
-        text-align: center;
-        padding: 15px;
-        border-radius: 10px;
-        width: 90%;
-        margin: auto;
-        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
-        pointer-events: none;
-    }
-            .project-card .project-info {
-                text-align: center !important; /* ✅ Ensure text is centered */
-                display: flex !important; /* ✅ Use flexbox for centering */
-                justify-content: center !important; /* ✅ Horizontally center text */
-                align-items: center !important; /* ✅ Vertically center text */
-                flex-direction: column; /* ✅ Stack text properly */
+                opacity: 0; /* Hide text */
+                visibility: hidden;
+                color: white !important;
+                background: rgba(0, 0, 0, 0.8) !important;
+                text-align: center;
+                padding: 15px;
+                border-radius: 10px;
+                width: 90%;
+                display: flex !important;
+                margin: auto;
+                justify-content: center !important;
+                transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+                pointer-events: none;
+                align-items: center !important;
+                flex-direction: column; 
             }
 
-    /* ✅ Darken Image on Active */
-    .project-card.active img {
-        filter: brightness(40%) !important;
-    }
-
-    /* ✅ Ensure Overlay Stays on Top */
-    .project-card .project-info {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10 !important;
-    }
-
-    /* ✅ When JavaScript Adds .active Class, Show Text */
-    .project-card.active .project-info {
-        opacity: 1 !important;
-        visibility: visible !important;
-        pointer-events: auto !important;
-    }
+            /* Darken Image on Active */
+            .project-card.active img {
+                filter: brightness(40%) !important;
+            }
+        
+            /* Ensure Overlay Stays on Top */
+            .project-card .project-info {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10 !important;
+            }
+        
+            /* When JavaScript Adds .active Class, Show Text */
+            .project-card.active .project-info {
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+            }
         
             /* Disable Any Background That Might Be Causing the White Slate */
             .project-card .overlay {
@@ -1127,11 +1124,11 @@
             margin: 20px auto; /* Center the button */
         }
 
-        }
+    }
 /* ----------------------------------------------- */
 
 
-    </style>
+</style>
 
 </head>
 <body>
