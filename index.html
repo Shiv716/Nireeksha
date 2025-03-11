@@ -643,6 +643,15 @@
                 height: auto; /* Maintain aspect ratio */
                 margin-bottom: 30px; /* Adjust spacing */
             }
+
+            #logo-section .btn-custom, 
+            #logo-section .btn-custom:visited, 
+            #logo-section .btn-custom:active {
+                color: inherit !important;  /* Keep the original color */
+                background-color: inherit !important;
+                text-decoration: none !important;
+            }
+
                     
             /* Navigation */
             nav {
@@ -916,18 +925,23 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center; /* Ensure full centering */
+                text-align: center;
+                width: 100%;
             }
+
             
             /* Ensure each service card is centered */
             .service-card {
-                width: 90%; /* Adjust width for mobile */
+                width: 100%;  /* Ensure it fully fits */
                 max-width: 350px; /* Prevents excessive width */
-                margin: 0 auto 20px; /* Centers the card and adds spacing */
+                margin: 0 auto 20px; /* Centers properly */
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
+
 
             a, a:visited, a:active {
                 color: inherit !important; /* Keep original color */
