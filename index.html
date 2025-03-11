@@ -1048,14 +1048,18 @@
 
             #message {
                 width: 100%; /* Full width */
-                max-width: 100%; /* Prevents unnecessary stretching */
-                height: 150px; /* Normal height */
-                border-radius: 10px; /* Keep soft rounded edges */
+                max-width: 400px; /* Prevents it from becoming too wide */
+                height: 120px; /* Normal height */
                 font-size: 1rem; /* Standard text size */
                 padding: 10px;
+                border-radius: 8px; /* Keeps a soft border */
+                resize: vertical; /* Allows user to adjust height if needed */
             }
 
-            #contact-form button {
+            #contact-form button,
+            #contact-form button:visited,
+            #contact-form button:active,
+            #contact-form button:focus {
                 color: inherit !important; /* Keeps original text color */
                 background-color: inherit !important; /* Prevents color change */
                 border-color: inherit !important; /* Keeps border the same */
