@@ -696,10 +696,18 @@
                 height: auto;
             }
                 
-            .project-info {
-                opacity: 0;
-                transition: opacity 0.4s ease-in-out;
+           .project-card .project-info {
+                opacity: 1 !important; /* Ensure text is fully visible */
+                visibility: visible !important;
+                color: white !important; /* Make text stand out */
+                background: rgba(0, 0, 0, 0.7) !important; /* Darken overlay for contrast */
+                text-align: center;
+                padding: 15px;
+                border-radius: 10px;
+                width: 90%; /* Keep text readable */
+                margin: auto;
             }
+            
             .project-card:hover .project-info,
             .project-card:active .project-info {
                 opacity: 1 !important;
@@ -711,6 +719,30 @@
                 color: white !important;
                 text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Add shadow for better readability */
                 padding: 10px;
+            }
+
+            .project-card:hover img,
+            .project-card:active img {
+                filter: brightness(40%) !important; /* Darken image when overlay is shown */
+            }
+        
+            /* Ensure Overlay Stays Above White Areas */
+            .project-card {
+                position: relative;
+                overflow: hidden; /* Prevents extra white areas */
+            }
+        
+            .project-card .project-info {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10 !important; /* Keep overlay above everything */
+            }
+        
+            /* Disable Any Background That Might Be Causing the White Slate */
+            .project-card .overlay {
+                background: transparent !important;
             }
         
             /* Contact Form */
