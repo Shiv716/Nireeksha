@@ -933,35 +933,50 @@
             .scroll-button:hover {
                 opacity: 1 !important; /* Maintain hover effect */
             }
-            
+
             .leader {
                 display: flex;
-                flex-direction: column; /* Stack image & text */
+                flex-direction: column;
                 align-items: center;
                 text-align: center;
                 padding: 20px;
-                width: 90%;
-                max-width: 1000px;
-                margin: 0 auto;
-            }
-            
-            .leader-info {
-                padding: 10px;
-                text-align: center;
+                width: 100%; /* Match other team members' card size */
+                max-width: 350px; /* Ensure uniform width */
+                border-radius: 20px;
+                background: white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin: 0 auto 20px;
             }
             
             .leader-image {
                 width: 100%;
-                max-width: 250px;
-                margin-top: 15px;
+                max-width: 120px; /* Match other team members */
+                border-radius: 15%;
+                margin-bottom: 10px; /* Moves image to top */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
             }
             
-            .leader-image img {
-                width: 100%;
-                border-radius: 8%;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            .leader-info {
+                padding: 15px;
+                text-align: center;
             }
-
+            
+            .leader-info p {
+                margin: 5px 0;
+                font-size: 1rem;
+                color: #555; /* Maintain readability */
+            }
+            
+            /* Retain Yellow Color for Email */
+            .leader-info a {
+                color: #daa60c !important; /* Keep email in yellow */
+                text-decoration: none;
+            }
+            
+            .leader-info a:hover {
+                text-decoration: underline;
+                color: #b67509; /* Slightly darker yellow on hover */
+            }
 
         }
 /* ----------------------------------------------- */
