@@ -1018,15 +1018,20 @@
                 padding: 5px;
                 justify-content: center !important;
                 align-items: center !important;
+                text-indent: -9999px;
+                overflow: hidden;
+                position: relative;
             }
 
-            #scroll-left::before {
+            #scroll-left ::before,
+            #scroll-left-awards::before {
                 content: "\f104"; /* Font Awesome left arrow */
                 font-family: "Font Awesome 6 Free" !important;
                 font-weight: 900 !important;
             }
         
-            #scroll-right::before {
+            #scroll-right ::before,
+            #scroll-right-awards::before {
                 content: "\f105"; /* Font Awesome right arrow */
                 font-family: "Font Awesome 6 Free" !important;
                 font-weight: 900 !important;
