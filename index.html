@@ -1047,18 +1047,33 @@
             }
 
             #contact-form .form-control {
-                width: 90%; /* Adjust input fields for mobile screens */
-                max-width: 100%; /* Ensures they stretch properly */
+               width: 100% !important; /* Ensure full width */
+                max-width: 600px !important; /* Set a larger max width */
+                display: block;
+                margin: 0 auto; /* Center align */
             }
 
             .btn-custom:visited,
             .btn-custom:active,
-            .btn-custom:focus {
+            .btn-custom:focus,
+            a:visited,
+            a:active {
                 color: inherit !important; 
                 background-color: inherit !important;
                 border-color: inherit !important;
                 outline: none !important;
+                text-decoration: none !important;
                 box-shadow: none !important;
+            }
+
+            #contact p,
+            #contact a {
+                color: white !important; /* Keep text white */
+                text-decoration: none !important;
+            }
+            
+            #contact a:hover {
+                text-decoration: underline !important;
             }
 
         }
