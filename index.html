@@ -1047,19 +1047,21 @@
             }
 
             #contact .form-control {
-               width: 100% !important; /* Ensure full width */
-                max-width: 700px !important; /* Set a larger max width */
-                display: block;
-                margin: 0 auto; /* Center align */
+                width: 100% !important; /* Make input fields take full width */
+                max-width: 700px !important; /* Set max width */
+                display: block !important;
+                margin: 0 auto !important; /* Center the fields */
+                font-size: 1rem !important; /* Make text readable */
+                padding: 12px !important;
             }
-
+            
             .btn-custom:visited,
             .btn-custom:active,
             .btn-custom:focus,
             a:visited,
             a:active {
-                color: inherit !important; 
-                background-color: inherit !important;
+                color: black !important;  /* Force black color */
+                background-color: transparent !important;
                 text-decoration: none !important;
                 outline: none !important;
                 box-shadow: none !important;
@@ -1067,9 +1069,9 @@
 
             .service-card p,
             .service-card a {
-                color: black !important; /* Keep text black */
+                color: black !important; /* Ensure black text */
             }
-            
+        
             .service-card a:hover {
                 text-decoration: underline !important;
             }
