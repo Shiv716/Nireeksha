@@ -575,7 +575,7 @@
             }
 
             #logo-section {
-                margin-top: -50px; /* Moves everything 50px up */
+                margin-top: -70px; /* Moves everything 50px up */
                 padding-top: 20px; /* Prevents overlap with the header */
             }
 
@@ -620,7 +620,7 @@
             /* Hero Section */
             #hero {
                 height: auto; /* Allow it to size dynamically */
-                min-height: 130vh; /* Just fill one full screen */
+                min-height: 160vh; /* Just fill one full screen */
                 display: flex;
                 flex-direction: column;
                 justify-content: center; /* Center content vertically */
@@ -696,6 +696,13 @@
                 opacity: 1 !important;
             }
 
+            .project-card .overlay .project-info {
+                font-size: 1.2rem; /* Increase readability */
+                font-weight: bold;
+                color: white !important;
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Add shadow for better readability */
+                padding: 10px;
+            }
         
             /* Contact Form */
             .form-control {
@@ -787,6 +794,15 @@
                     opacity: 1 !important; /* Always visible */
                     pointer-events: auto !important; /* Ensure it can be clicked */
                     background-color: rgba(0, 0, 0, 0.7); /* Ensure contrast */
+                    color: white !important; /* Make text stand out */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    padding: 15px;
+                    height: 100%; /* Ensure full coverage */
+                    width: 100%;
                 }
                 
                 .project-card:active .overlay {
@@ -935,30 +951,31 @@
             }
 
             .scroll-buttons-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 15px;
-                margin-top: 10px;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                gap: 15px !important;
+                margin-top: 10px !important;
+                width: 100%;
             }
             
             .scroll-button {
                 background-color: transparent !important;
                 color: #f5c107 !important; /* Keep same color as desktop */
                 border: none !important;
-                font-size: 1.2rem !important; /* Ensure same size */
-                padding: 5px !important;
-                cursor: pointer;
-                z-index: 100;
-                opacity: 0.6;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: opacity 0.3s ease-in-out;
+                font-size: 2rem !important; /* Make it the same size as desktop */
+                padding: 10px !important;
+                cursor: pointer !important;
+                z-index: 100 !important;
+                opacity: 1 !important; /* Ensure full visibility */
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                transition: opacity 0.3s ease-in-out !important;
             }
             
             .scroll-button:hover {
-                opacity: 1 !important; /* Maintain hover effect */
+                opacity: 0.8 !important; /* Slight fade effect on hover */
             }
 
             .leader {
