@@ -1113,7 +1113,7 @@
                 font-size: 2rem !important;
                 text-indent: 0;
                 position: absolute;
-                left: 50%;
+                left: 30%;
                 transform: translateX(-50%);
             }
         
@@ -1135,7 +1135,7 @@
                 font-size: 2rem !important;
                 text-indent: 0;
                 position: absolute;
-                left: 40%;
+                left: -40%;
                 transform: translateX(-50%);
             }
 
@@ -1443,64 +1443,64 @@
     //<!-- Card and logo animation. -->
     AOS.init();
 
- // Landing page animation
+     // Landing page animation
     document.addEventListener("DOMContentLoaded", function () {
     const ctaSection = document.getElementById("logo-section");
-    const images = [
-        "Images/prj1.jpg",
-        "Images/FrontPg.png",
-        "Images/prj3.jpg"
-    ];
-
-    let index = 0; // Start from the first image
-
-    function changeBackground() {
-        // Cycle through images (loops back to the first image)
-        index = (index + 1) % images.length;
-        const nextImage = images[index];
-
-        // Preload the next image
-        const img = new Image();
-        img.src = nextImage;
-        img.onload = function () {
-            // Create a fading overlay
-            const transitionLayer = document.createElement("div");
-            transitionLayer.style.position = "absolute";
-            transitionLayer.style.top = "0";
-            transitionLayer.style.left = "0";
-            transitionLayer.style.width = "100%";
-            transitionLayer.style.height = "100%";
-            transitionLayer.style.background = `
-                linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(234, 229, 229, 0.95) 50%, rgba(255, 255, 255, 0) 100%),
-                url(${nextImage})`;
-            transitionLayer.style.backgroundSize = "cover";
-            transitionLayer.style.backgroundPosition = "center";
-            transitionLayer.style.opacity = "0";
-            transitionLayer.style.transition = "opacity 1.5s ease-in-out";
-            transitionLayer.style.zIndex = "-1";
-
-            // Append overlay
-            ctaSection.appendChild(transitionLayer);
-
-            // Fade in the new image
-            setTimeout(() => {
-                transitionLayer.style.opacity = "1";
-
+        const images = [
+            "Images/prj1.jpg",
+            "Images/FrontPg.png",
+            "Images/prj3.jpg"
+        ];
+    
+        let index = 0; // Start from the first image
+    
+        function changeBackground() {
+            // Cycle through images (loops back to the first image)
+            index = (index + 1) % images.length;
+            const nextImage = images[index];
+    
+            // Preload the next image
+            const img = new Image();
+            img.src = nextImage;
+            img.onload = function () {
+                // Create a fading overlay
+                const transitionLayer = document.createElement("div");
+                transitionLayer.style.position = "absolute";
+                transitionLayer.style.top = "0";
+                transitionLayer.style.left = "0";
+                transitionLayer.style.width = "100%";
+                transitionLayer.style.height = "100%";
+                transitionLayer.style.background = `
+                    linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(234, 229, 229, 0.95) 50%, rgba(255, 255, 255, 0) 100%),
+                    url(${nextImage})`;
+                transitionLayer.style.backgroundSize = "cover";
+                transitionLayer.style.backgroundPosition = "center";
+                transitionLayer.style.opacity = "0";
+                transitionLayer.style.transition = "opacity 1.5s ease-in-out";
+                transitionLayer.style.zIndex = "-1";
+    
+                // Append overlay
+                ctaSection.appendChild(transitionLayer);
+    
+                // Fade in the new image
                 setTimeout(() => {
-                    // Apply new background and remove overlay
-                    ctaSection.style.backgroundImage = `url(${nextImage})`;
-                    ctaSection.removeChild(transitionLayer);
-                }, 1500); // Matches transition time
-            }, 50);
-        };
-    }
-
-    // Change background every 5 seconds continuously
-    setInterval(changeBackground, 5000);
-
-    // Start changing background immediately on page load
-    changeBackground();
-});
+                    transitionLayer.style.opacity = "1";
+    
+                    setTimeout(() => {
+                        // Apply new background and remove overlay
+                        ctaSection.style.backgroundImage = `url(${nextImage})`;
+                        ctaSection.removeChild(transitionLayer);
+                    }, 1500); // Matches transition time
+                }, 50);
+            };
+        }
+    
+        // Change background every 5 seconds continuously
+        setInterval(changeBackground, 5000);
+    
+        // Start changing background immediately on page load
+        changeBackground();
+    });
 
     // Click effect for projects on mobile.
     document.addEventListener("DOMContentLoaded", function () {
