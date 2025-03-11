@@ -264,16 +264,24 @@
                 overflow: hidden;
             }
 
-        footer {
-                        width: 100vw;
-                        height: auto;
-                        padding: 10px;
-                        text-align: center;
-                    }
+                footer {
+                    width: 100vw;
+                    height: auto;
+                    padding: 10px;
+                    text-align: center;
+                }
 
-
-           }
-
+            .rounded-bullets li {
+                font-size: 1.1rem; /* Increases text size on mobile */
+                padding-left: 18px; /* Slightly more space on small screens */
+            }
+        
+            .rounded-bullets li::before {
+                left: -8px; /* Moves bullets even further left on mobile */
+                width: 10px; /* Larger bullet for visibility */
+                height: 10px;
+            }
+    }
 
 </style>
 
