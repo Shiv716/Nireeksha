@@ -293,16 +293,16 @@
         
             /* Improve bullet point readability */
             .rounded-bullets li {
-                padding-left: 18px !important; /* Ensures proper spacing */
-                font-size: 1rem !important;
-                line-height: 1.4 !important; /* Helps align multi-line text */
+                padding-left: 18px !important; /* Slightly smaller space for bullets */
+                font-size: 1rem;
+                line-height: 1.4 !important; /* Better spacing */
             }
-            
+        
             .rounded-bullets li::before {
-                left: -15px !important; /* Moves bullets left, but keeps alignment */
-                width: 6px !important; /* Slightly larger bullets for visibility */
-                height: 6px !important;
-                top: 0.65em !important; /* Keeps bullets aligned with text */
+                left: -10px !important; /* Moves bullet slightly left */
+                top: 0.40em !important; /* Moves bullet up more on mobile */
+                width: 7px !important; /* Keep bullets proportional */
+                height: 7px !important;
             }
         }
 
