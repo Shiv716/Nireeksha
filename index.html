@@ -718,21 +718,7 @@
                 filter: brightness(40%) !important;
             }
         
-            /* Ensure Overlay Stays on Top */
-            .project-card .project-info {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 10 !important;
-                display: flex !important; 
-                flex-direction: column !important; 
-                align-items: center !important; 
-                justify-content: center !important;
-                text-align: center !important; 
-                width: 100% !important;
-                height: 100% !important;
-            }
+        
         
             /* When JavaScript Adds .active Class, Show Text */
             .project-card.active .project-info {
@@ -750,7 +736,7 @@
                 opacity: 1 !important; /* Make text fully visible */
                 visibility: visible !important;
                 color: white !important; /* Ensure text is readable */
-                background: rgba(0, 0, 0, 0.8) !important; /* Ensure good contrast */
+                background: rgba(0, 0, 0, 0.5) !important; /* Ensure good contrast */
                 text-align: center;
                 padding: 15px;
                 border-radius: 10px;
