@@ -187,18 +187,19 @@
             list-style: none; /* Removes default bullet */
             position: relative;
             padding-left: 20px;
+            font-size: 1rem;
+            line-height: 1.5; /* Ensures even spacing */
         }
-
+        
         .rounded-bullets li::before {
             content: "";
             position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 5px;
-            height: 5px;
-            background: black; /* Red bullet */
-            border-radius: 50%; /* Makes it a circle */
+            left: -8px; /* Moves bullets slightly left */
+            top: 0.6em; /* Aligns with the first line of text */
+            width: 8px; /* Makes bullets more visible */
+            height: 8px;
+            background: black;
+            border-radius: 50%;
         }
 
         .pt-h3 {
