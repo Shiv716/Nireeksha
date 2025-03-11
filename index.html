@@ -1118,7 +1118,7 @@
                 border: none;
                 cursor: pointer !important;
                 display: flex !important;
-                padding: 5px;
+                padding: 10px;
                 justify-content: center !important;
                 align-items: center !important;
                 text-indent: -9999px;
@@ -1126,7 +1126,17 @@
                 position: relative;
             }
 
-            #scroll-left::after,
+            #scroll-left::after {
+                content: "\f104"; !important;/* Font Awesome left arrow */
+                font-family: "Font Awesome 6 Free" !important;
+                font-weight: 900 !important;
+                font-size: 2rem !important;
+                text-indent: 0;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
             #scroll-left-awards::after {
                 content: "\f104"; !important;/* Font Awesome left arrow */
                 font-family: "Font Awesome 6 Free" !important;
@@ -1138,7 +1148,17 @@
                 transform: translateX(-50%);
             }
         
-            #scroll-right::after,
+            #scroll-right::after {
+                content: "\f105"; !important;/* Font Awesome right arrow */
+                font-family: "Font Awesome 6 Free" !important;
+                font-weight: 900 !important;
+                font-size: 2rem !important;
+                text-indent: 0;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
             #scroll-right-awards::after {
                 content: "\f105"; !important;/* Font Awesome right arrow */
                 font-family: "Font Awesome 6 Free" !important;
