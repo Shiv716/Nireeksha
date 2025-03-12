@@ -499,10 +499,16 @@
             color: #b67509; /* Slightly darker shade on hover */
         }
 
+        /* Customising service cards */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
         #specialities {
             text-align: center;
             padding: 50px 20px;
             height: 85vh;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         .specialities-container {
@@ -526,10 +532,36 @@
             justify-content: center;
             align-items: center;
             transition: transform 0.3s ease-in-out;
+            flex-direction: column;
+            border: 3px solid #daa60c; /* Thick black border */
+        }
+
+        .speciality-card p {
+            flex-grow: 1; /* Allows the text to take up remaining space */
+            font-weight: bold;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        .speciality-card i {
+            align-self: center;
+            padding-bottom: 10px;
+            color: #daa60c; /* Optional: Adjust icon color */
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .speciality-card:hover i {
+            transform: scale(1);
+            color: #ffd500; /* Optional: Change color on hover */
+        }
+
+        .speciality-card:hover i::before {
+            content: "\f7d9"; /* Unicode for a different icon */
         }
 
         .speciality-card:hover {
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border: 3px solid #ffd500;
         }
 
         .speciality-card img {
@@ -941,6 +973,52 @@
                 max-width: 1000px;
                 margin: 0 auto;
             }
+
+             /*---------For Speciality cards----------- */
+
+             #specialities {
+                text-align: center;
+                padding: 50px 20px;
+                height: 85vh;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+            .speciality-card p {
+                flex-grow: 1; /* Allows the text to take up remaining space */
+                font-weight: bold;
+                margin: 10px 0;
+                padding: 10px;
+            }
+
+            .speciality-card i {
+                align-self: center;
+                padding-bottom: 10px;
+                color: #daa60c; /* Optional: Adjust icon color */
+                transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            }
+
+            .speciality-card:hover i {
+                transform: scale(1);
+                color: #ffd500; /* Optional: Change color on hover */
+            }
+
+            .speciality-card:hover i::before {
+                content: "\f7d9"; /* Unicode for a different icon */
+            }
+
+            .speciality-card:hover {
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                border: 3px solid #ffd500;
+            }
+
+            .speciality-card:hover {
+                transform: scale(1.05);
+            }
+
+             /*---------------------------------------- */
+
             
             /* Ensure each service card is centered */
             .service-card {
@@ -1209,35 +1287,43 @@
         <div class="specialities-container">
             <!-- Speciality Cards -->
             <div class="speciality-card" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1500">
-                <img src="Images/speciality1.jpg" alt="Speciality 1">
+                <p>Turnarounds maintenance  & revamp jobs</p>
+                <i style="margin-top: -15px;" class="fas fa-cogs fa-3x"></i> <!-- Mechanical symbol -->
             </div>
     
             <div class="speciality-card" data-aos="fade-down" data-aos-delay="600" data-aos-duration="1500">
-                <img src="Images/speciality2.jpg" alt="Speciality 2">
+                <p>Heavy erections services</p>
+                <i class="fas fa-cogs fa-3x"></i>
             </div>
     
             <div class="speciality-card" data-aos="fade-down" data-aos-delay="900" data-aos-duration="1500">
-                <img src="Images/speciality3.jpg" alt="Speciality 3">
+                <p>Piping & fabrication services</p>
+                <i class="fas fa-cogs fa-3x"></i>
             </div>
     
             <div class="speciality-card" data-aos="fade-down" data-aos-delay="1200" data-aos-duration="1500">
-                <img src="Images/speciality4.jpg" alt="Speciality 4">
+                <p>Fabrication & erection of structural job</p>
+                <i class="fas fa-cogs fa-3x"></i>
             </div>
     
             <div class="speciality-card" data-aos="fade-down" data-aos-delay="1500" data-aos-duration="1500">
-                <img src="Images/speciality5.jpg" alt="Speciality 5">
+                <p>Emergency breakdown maintenance</p>
+                <i class="fas fa-cogs fa-3x"></i>
             </div>
     
             <div class="speciality-card" data-aos="fade-down" data-aos-delay="1800" data-aos-duration="1500">
-                <img src="Images/speciality6.jpg" alt="Speciality 6">
+                <p>Projects works</p>
+                <i class="fas fa-cogs fa-3x"></i>
             </div>
 
             <div class="speciality-card" data-aos="fade-down" data-aos-delay="2100" data-aos-duration="1500">
-                <img src="Images/speciality6.jpg" alt="Speciality 7">
+                <p>Annual rates of contracts</p>
+                <i class="fas fa-cogs fa-3x"></i>
             </div>
 
             <div class="speciality-card" data-aos="fade-down" data-aos-delay="2400" data-aos-duration="1500">
-                <img src="Images/speciality6.jpg" alt="Speciality 8">
+                <p>Manpower supply services</p>
+                <i class="fas fa-cogs fa-3x"></i>
             </div>
         </div>
         
