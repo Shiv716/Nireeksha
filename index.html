@@ -819,7 +819,7 @@
                     background: rgba(0, 0, 0, 0.8) !important; /* Ensure good contrast */
                     color: white !important; /* Make text stand out */
                     display: flex;
-                    font-size: 2rem;
+                    font-size: 1rem;
                     font-weight: bold;
                     flex-direction: column;
                     justify-content: center;
@@ -834,18 +834,18 @@
                     opacity: 1 !important;
                     pointer-events: auto;
                 }
-
-                 .project-info {
-                     font-size: 1rem;
-                     font-weight: bold;
-                     padding: 20px;
-                 }
         
                 /* Ensure buttons inside overlay remain clickable */
                 .project-card .overlay a,
                 .project-card .overlay .btn {
                     pointer-events: auto !important;
                 }
+            }
+
+            .project-info {
+                font-size: 1.3rem; /* Slightly smaller for tablets */
+                font-weight: bold;
+                padding: 20px;
             }
         
             /* Ensuring All Project Cards Have Consistent Size */
