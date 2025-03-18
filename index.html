@@ -38,8 +38,8 @@
         }
 
         #hero {
-            background: linear-gradient(to right, #f5c107, #daa60c);
-            color: white;
+            background: linear-gradient(to right, #ffd500, #f3ad33);
+            color: black;
             height: 90vh;
             display: flex;
             flex-direction: column;
@@ -160,7 +160,7 @@
             width: 100%;
             height: 100%;
             background: 
-            linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(234, 229, 229, 0.95) 50%, rgba(255, 255, 255, 0) 100%);
+            linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(234, 229, 229, 0.95) 43%, rgba(255, 255, 255, 0) 100%);
             z-index: -1;
             pointer-events: none;
         }
@@ -255,13 +255,32 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            text-align: center;
+           
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             opacity: 0;
             border-radius: 20px;
             transition: opacity 0.4s ease-in-out;
+            width: 90%;
+
+            max-width: 500px;
+            height: auto; /* Ensure it expands with text */
+            text-align: left; /* Prevents forcing everything into a single line */
+            display: flex;
+            flex-direction: column; /* Ensures the paragraph stacks */
+            align-items: center; /* Centers text properly */
+        }
+
+        .project-info p {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+            white-space: normal;
+            word-spacing: normal;
+            line-height: 1.5;
         }
 
         .project-card:hover .project-info {
@@ -341,6 +360,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease-in-out;
             border-radius: 20px;
+            border: 1px solid black;
         }
 
         .certification-card:hover {
@@ -352,6 +372,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display:block;
         }
 
         .award-info {
@@ -1190,7 +1211,7 @@
                 font-size: 2rem !important;
                 text-indent: 0;
                 position: absolute;
-                right: 50%
+                right: 50%;
                 transform: translateX(-50%);
             }
             
@@ -1324,28 +1345,58 @@
 
             <div class="projects-container">
                 <div class="project-card" data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000">
-                    <img src="Images/prj1.jpg" alt="Project 1">
-                    <div class="project-info">Project 1: Innovative AI Solution</div>
+                    <img src="Images/projs/work1.jpg" alt="Project 1">
+                    <div class="project-info">
+                        <p>
+                            General maintenance and cleaning of the RRS System, including the reactor, regenerator, orifice chamber, 
+                            standpipe, co-boiler, fractionators column, and heaters. Key tasks included replacing four reactor cyclones, 
+                            repairing the LDD gas tube, replacing the regenerator air grid, standpipe, expansion bellow, and regenerator nozzle. 
+                            Additional work involved reinforcing the kicker box support, upgrading the vapor line from 28” to 34” dia, decoking 
+                            and replacing heater tubes, and renewing hex mesh and refractory lining.
+                        </p>
+                    </div>
                 </div>
-            
+
                 <div class="project-card" data-aos="fade-down" data-aos-delay="600" data-aos-duration="2000">
-                    <img src="Images/prj2.jpg.jpg" alt="Project 2">
-                    <div class="project-info">Project 2: Fintech System Optimization</div>
+                    <img src="Images/projs/work2_real.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <p>
+                            Fabrication, supply, and replacement of the stripper section with an internal riser, two regenerator 
+                            primary cyclones with transfer ducts, air rings, and the regenerator catalyst lift line. Work included 
+                            removal, cutting, rigging, and welding, completed with a workforce of ~850 in 28 engineering days.
+                        </p>
+                    </div>
                 </div>
-            
+
                 <div class="project-card" data-aos="fade-down" data-aos-delay="900" data-aos-duration="2000">
-                    <img src="Images/prj3.jpg" alt="Project 3">
-                    <div class="project-info">Project 3: Market Expansion Strategy</div>
+                    <img src="Images/projs/work3.jpg" alt="Project 3">
+                    <div class="project-info">
+                        <p>
+                            Maintenance of heat exchangers, columns, vessels, fin fan coolers, and other equipment, carried out with a total workforce of ~1100.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="project-card" data-aos="fade-down" data-aos-delay="1200" data-aos-duration="2000">
-                    <img src="Images/prj3.jpg" alt="Project 3">
-                    <div class="project-info">Project 3: Market Expansion Strategy</div>
+                    <img src="Images/projs/work4.jpg" alt="Project 4">
+                    <div class="project-info">
+                        <p>
+                            Replacement of the regenerator dome, primary and secondary cyclones, and maintenance of the reactor, 
+                            regenerator, and shell. Tasks included repairing the stripper section, replacing stripper packing, all 
+                            12 optimix nozzles, bellows, and the transition zone. Also involved column and COB system maintenance, 
+                            completed with ~1000 manpower.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="project-card" data-aos="fade-down" data-aos-delay="1500" data-aos-duration="2000">
-                    <img src="Images/prj3.jpg" alt="Project 3">
-                    <div class="project-info">Project 3: Market Expansion Strategy</div>
+                    <img src="Images/projs/work5.jpg" alt="Project 5">
+                    <div class="project-info">
+                        <p>
+                            Handling and replacement of a 6MT flare tip assembly at a 100M elevation, including erection and dismantling 
+                            of a 600MT crawler crane. Completed successfully in 8 engineering days with ~150 manpower.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -1362,31 +1413,22 @@
             <div class="certifications-container">
                 <!-- Certification Cards -->
                 <div class="certification-card" data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000">
-                    <img src="Images/cert1.jpg" alt="Certification 1">
+                    <img src="Images/awards/Award1.jpg" alt="Certification 1">
                 </div>
                 
                 <div class="certification-card" data-aos="fade-down" data-aos-delay="600" data-aos-duration="2000">
-                    <img src="Images/cert2.jpg" alt="Certification 2">
+                    <img src="Images/awards/Award4.jpg" alt="Certification 2">
                 </div>
                 
                 <div class="certification-card" data-aos="fade-down" data-aos-delay="900" data-aos-duration="2000">
-                    <img src="Images/cert3.jpg" alt="Certification 3">
+                    <img src="Images/awards/Award3.jpg" alt="Certification 3">
                 </div>
 
 
                 <div class="certification-card" data-aos="fade-down" data-aos-delay="1200" data-aos-duration="2000">
-                    <img src="Images/cert3.jpg" alt="Certification 3">
+                    <img src="Images/awards/Award2.jpg" alt="Certification 3">
                 </div>
 
-
-                <div class="certification-card" data-aos="fade-down" data-aos-delay="1500" data-aos-duration="2000">
-                    <img src="Images/cert3.jpg" alt="Certification 3">
-                </div>
-
-
-                <div class="certification-card" data-aos="fade-down" data-aos-delay="1800" data-aos-duration="2000">
-                    <img src="Images/cert3.jpg" alt="Certification 3">
-                </div>
             </div>
         
             <div class="scroll-buttons-container">
@@ -1426,7 +1468,7 @@
                 <div class="leader-info text-styled">
                     <h3>Mr. Sanjeev Choudhary</h3>
                     <p><i class="fas fa-briefcase"></i> <strong>Founder</strong></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@nireekshaengitech.com">info@nireekshaengitech.com</a></p>
                     <blockquote>"Leading with innovation and passion to drive success.
                         Leading with innovation and passion to drive success.
                         Leading with innovation and passion to drive success.
@@ -1521,9 +1563,12 @@
     document.addEventListener("DOMContentLoaded", function () {
     const ctaSection = document.getElementById("logo-section");
         const images = [
-            "Images/prj1.jpg",
+            "Images/projs/work1.jpg",
             "Images/FrontPg.png",
-            "Images/prj3.jpg"
+           "Images/projs/work2.jpg",
+           "Images/projs/work3.jpg",
+           "Images/projs/work4.jpg",
+           "Images/projs/work5.jpg",
         ];
     
         let index = 0; // Start from the first image
@@ -1545,7 +1590,7 @@
                 transitionLayer.style.width = "100%";
                 transitionLayer.style.height = "100%";
                 transitionLayer.style.background = `
-                    linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(234, 229, 229, 0.95) 50%, rgba(255, 255, 255, 0) 100%),
+                    linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(234, 229, 229, 0.95) 43%, rgba(255, 255, 255, 0) 100%),
                     url(${nextImage})`;
                 transitionLayer.style.backgroundSize = "cover";
                 transitionLayer.style.backgroundPosition = "center";
